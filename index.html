@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-
-  <link rel="icon" type="image/png" href="https://convidatasshop.wordpress.com/wp-content/uploads/2026/01/novo-projeto-6.png">
+  
   
   <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=AW-123456789"></script>
@@ -199,6 +198,12 @@
             gap: 2rem;
         }
 
+        @media (min-width: 1025px) {
+            .services-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+
         .service-card {
             background: var(--white);
             border-radius: 10px;
@@ -358,7 +363,7 @@
             color: var(--primary-color);
         }
 
-        .form-group input {
+        .form-group input, .form-group textarea {
             width: 100%;
             padding: 12px;
             border: 1px solid #ddd;
@@ -564,7 +569,7 @@
         <div class="hero-content">
             <img src="https://convidatasshop.wordpress.com/wp-content/uploads/2026/01/novo-projeto-4.png?w=1024" alt="Ricardo Ramos" style="max-width: 300px; margin: 0 auto 2rem; display: block;">
             <p class="hero-subtitle">Seja muito bem-vindo. Aqui, realço o que você tem de melhor. Descubra o poder da estética avançada</p>
-            <a href="#servicos" class="btn btn-outline">Conheça Meus Serviços</a>
+            <a href="#servicos" class="btn btn-outline" onclick="gtag('event','conversion',{'send_to':'AW-123456789/SERVICOS123'})">Conheça Meus Serviços</a>
         </div>
     </section>
 
@@ -584,8 +589,7 @@
                     <h3>Toxina Botulínica (Botox) Preventivo e Full Face</h3>
                     <p>A toxina botulínica é indicada para prevenção e tratamento das rugas e linhas de expressão, promovendo rejuvenescimento facial com naturalidade.</p>
                   <p>O procedimento atua no relaxamento controlado da musculatura, preservando a expressividade e prevenindo o envelhecimento precoce.</p>
-                    <a href="https://wa.me/5563999610812?text=Olá! Gostaria de saber mais sobre Toxina Botulínica (Botox)." class="btn" target="_blank"onclick="gtag('event','conversion',{'send_to':'AW-123456789/SERVICO123'})"
->
+                    <a href="https://wa.me/5563999610812?text=Olá! Gostaria de saber mais sobre Toxina Botulínica (Botox)." class="btn" target="_blank" onclick="gtag('event','conversion',{'send_to':'AW-123456789/SERVICO123'})">
   Saiba mais
 </a>
                 </div>
@@ -606,8 +610,7 @@
                   <p>Utiliza fios absorvíveis e biocompatíveis, com resultados naturais e progressivos, planejados de forma individualizada para garantir segurança e harmonia.</p>
 
 <p>Indicações: flacidez facial, perda do contorno da mandíbula, queda do terço médio da face e definição do pescoço.</p>
-                    <a href="https://wa.me/5563999610812?text=Olá! Gostaria de saber mais sobre Fios Faciais para Mini Lifting." class="btn" target="_blank"onclick="gtag('event','conversion',{'send_to':'AW-123456789/SERVICO123'})"
->
+                    <a href="https://wa.me/5563999610812?text=Olá! Gostaria de saber mais sobre Fios Faciais para Mini Lifting." class="btn" target="_blank" onclick="gtag('event','conversion',{'send_to':'AW-123456789/SERVICO123'})">
   Saiba mais
 </a>
                 </div>
@@ -625,8 +628,7 @@
                     <h3>Preenchimentos Faciais (Harmonização Facial)</h3>
                     <p>Os preenchimentos faciais com ácido hialurônico são utilizados para restaurar volumes, definir contornos e melhorar a simetria do rosto. </p>
                   <p>A harmonização facial é planejada de forma personalizada, respeitando as proporções faciais e buscando resultados naturais e sofisticados.</p>
-                    <a href="https://wa.me/5563999610812?text=Olá! Gostaria de saber mais sobre Preenchimentos Faciais e Harmonização Facial." class="btn" target="_blank"onclick="gtag('event','conversion',{'send_to':'AW-123456789/SERVICO123'})"
->
+                    <a href="https://wa.me/5563999610812?text=Olá! Gostaria de saber mais sobre Preenchimentos Faciais e Harmonização Facial." class="btn" target="_blank" onclick="gtag('event','conversion',{'send_to':'AW-123456789/SERVICO123'})">
   Saiba mais
 </a>
                 </div>
@@ -643,8 +645,7 @@
                 <div class="service-info">
                     <h3>Preenchimentos Corporais – Glúteos e Região Íntima</h3>
                     <p>Procedimentos indicados para melhora do contorno, volume e estética corporal. </p> <p>As técnicas são realizadas de forma individualizada, respeitando critérios de segurança, proporção e funcionalidade, promovendo resultados harmônicos e elegantes.</p>
-                    <a href="https://wa.me/5563999610812?text=Olá! Gostaria de saber mais sobre Preenchimentos Corporais (Glúteos e Região Íntima)." class="btn" target="_blank"onclick="gtag('event','conversion',{'send_to':'AW-123456789/SERVICO123'})"
->
+                    <a href="https://wa.me/5563999610812?text=Olá! Gostaria de saber mais sobre Preenchimentos Corporais (Glúteos e Região Íntima)." class="btn" target="_blank" onclick="gtag('event','conversion',{'send_to':'AW-123456789/SERVICO123'})">
   Saiba mais
 </a>
                 </div>
@@ -661,8 +662,7 @@
                 <div class="service-info">
                     <h3>Skinbooster</h3>
                     <p>O Skinbooster é um tratamento injetável voltado para hidratação profunda da pele, melhora da elasticidade, textura e viço. </p><p>Indicado para rejuvenescimento sutil e prevenção do envelhecimento cutâneo, proporcionando aparência saudável e natural.</p>
-                    <a href="https://wa.me/5563999610812?text=Olá! Gostaria de saber mais sobre Skinbooster." class="btn" target="_blank"onclick="gtag('event','conversion',{'send_to':'AW-123456789/SERVICO123'})"
->
+                    <a href="https://wa.me/5563999610812?text=Olá! Gostaria de saber mais sobre Skinbooster." class="btn" target="_blank" onclick="gtag('event','conversion',{'send_to':'AW-123456789/SERVICO123'})">
   Saiba mais
 </a>
                 </div>
@@ -680,8 +680,7 @@
                     <p>O Protocolo New Skin é um tratamento exclusivo voltado para a melhora global da qualidade da pele.</p><p> Atua no tratamento de manchas solares, melasma, acne ativa e cicatrizes de acne, promovendo uniformização do tom, renovação celular e saúde cutânea.
 </p><p>Cada protocolo é desenvolvido após avaliação individual, respeitando as necessidades específicas de cada paciente.
 </p>
-                    <a href="https://wa.me/5563999610812?text=Olá! Gostaria de saber mais sobre o Protocolo New Skin." class="btn" target="_blank"onclick="gtag('event','conversion',{'send_to':'AW-123456789/SERVICO123'})"
->
+                    <a href="https://wa.me/5563999610812?text=Olá! Gostaria de saber mais sobre o Protocolo New Skin." class="btn" target="_blank" onclick="gtag('event','conversion',{'send_to':'AW-123456789/SERVICO123'})">
   Saiba mais
 </a>
                 </div>
@@ -697,8 +696,7 @@
                 <div class="service-info">
                     <h3>Endolifting Facial e Corporal</h3>
                     <p>O Endolifting é um procedimento minimamente invasivo indicado para gordura localizada, flacidez facial e corporal.</p><p> Atua estimulando o colágeno e promovendo retração da pele, melhorando o contorno e a firmeza de forma progressiva e natural e ajudando na redução da gordura localizada por lipólise.</p>
-                    <a href="https://wa.me/5563999610812?text=Olá! Gostaria de saber mais sobre Endolifting Facial e Corporal." class="btn" target="_blank"onclick="gtag('event','conversion',{'send_to':'AW-123456789/SERVICO123'})"
->
+                    <a href="https://wa.me/5563999610812?text=Olá! Gostaria de saber mais sobre Endolifting Facial e Corporal." class="btn" target="_blank" onclick="gtag('event','conversion',{'send_to':'AW-123456789/SERVICO123'})">
   Saiba mais
 </a>
                 </div>
@@ -714,12 +712,36 @@
                 <div class="service-info">
                     <h3>Bioestimuladores de Colágeno</h3>
                     <p>Os bioestimuladores de colágeno promovem firmeza, sustentação e rejuvenescimento da pele por meio da estimulação natural do colágeno. </p><p>Indicados para face e corpo, oferecem resultados graduais, duradouros e naturais.</p>
-                    <a href="https://wa.me/5563999610812?text=Olá! Gostaria de saber mais sobre Bioestimuladores de Colágeno." class="btn" target="_blank"onclick="gtag('event','conversion',{'send_to':'AW-123456789/SERVICO123'})"
->
+                    <a href="https://wa.me/5563999610812?text=Olá! Gostaria de saber mais sobre Bioestimuladores de Colágeno." class="btn" target="_blank" onclick="gtag('event','conversion',{'send_to':'AW-123456789/SERVICO123'})">
   Saiba mais
 </a>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <!-- Contato -->
+    <section id="contato" class="section contact-section">
+        <h2 class="section-title">Agende Sua Avaliação</h2>
+        <div class="contact-container">
+            <div class="contact-image">
+                <img src="https://convidatasshop.wordpress.com/wp-content/uploads/2026/01/img_4721.jpg?w=768" alt="Agendamento">
+            </div>
+            <form class="contact-form" id="contactForm">
+                <div class="form-group">
+                    <label for="name">Nome Completo</label>
+                    <input type="text" id="name" required placeholder="Digite seu nome">
+                </div>
+                <div class="form-group">
+                    <label for="phone">Telefone</label>
+                    <input type="tel" id="phone" required placeholder="Digite seu telefone">
+                </div>
+                <div class="form-group">
+                    <label for="message">Mensagem</label>
+                    <textarea id="message" required placeholder="Digite sua mensagem" rows="4"></textarea>
+                </div>
+                <button type="submit" class="btn" style="width: 100%">Agendar</button>
+            </form>
         </div>
     </section>
   
@@ -822,15 +844,14 @@
             <div class="about-text">
                 <h3>Ricardo Ramos</h3>
                 <p>Ricardo Ramos é especialista em estética avançada, com 11 anos de atuação na área estética, oferecendo procedimentos estéticos faciais e corporais em Palmas, Tocantins, sempre com foco em segurança, individualização e resultados naturais.</p>
-                <br>
-                              <p>Com uma abordagem clínica ética e criteriosa, Ricardo acredita que a estética deve respeitar a anatomia, a identidade e a qualidade da pele de cada paciente. Por isso, todos os tratamentos são cuidadosamente planejados a partir de uma avaliação detalhada, considerando as necessidades e os objetivos individuais.</p>
-                <br>
-                              <p>Ao longo de sua trajetória profissional em Palmas – TO, desenvolveu técnicas próprias e protocolos exclusivos, como o Protocolo New Skin, voltado para o tratamento da qualidade da pele de forma personalizada. O protocolo é indicado para condições como manchas solares, melasma, acne ativa e cicatrizes de acne, promovendo renovação celular, uniformização do tom da pele e melhora global da saúde cutânea.</p>
-                <br>
-                              <p>Ricardo Ramos mantém constante atualização profissional e atua com técnicas modernas e avançadas, incluindo toxina botulínica, preenchimentos faciais e corporais, fios faciais para mini lifting, bioestimuladores de colágeno, skinbooster e endolifting facial e corporal, sempre priorizando resultados progressivos, harmônicos e naturais.</p>
-                <br>
+                <button id="readMoreBtn" class="btn">Leia mais</button>
+                <div id="moreAbout" style="display:none;">
+                <p>Com uma abordagem clínica ética e criteriosa, Ricardo acredita que a estética deve respeitar a anatomia, a identidade e a qualidade da pele de cada paciente. Por isso, todos os tratamentos são cuidadosamente planejados a partir de uma avaliação detalhada, considerando as necessidades e os objetivos individuais.</p>
+                <p>Ao longo de sua trajetória profissional em Palmas – TO, desenvolveu técnicas próprias e protocolos exclusivos, como o Protocolo New Skin, voltado para o tratamento da qualidade da pele de forma personalizada. O protocolo é indicado para condições como manchas solares, melasma, acne ativa e cicatrizes de acne, promovendo renovação celular, uniformização do tom da pele e melhora global da saúde cutânea.</p>
+                <p>Ricardo Ramos mantém constante atualização profissional e atua com técnicas modernas e avançadas, incluindo toxina botulínica, preenchimentos faciais e corporais, fios faciais para mini lifting, bioestimuladores de colágeno, skinbooster e endolifting facial e corporal, sempre priorizando resultados progressivos, harmônicos e naturais.</p>
                 <p>Na Ricardo Ramos Estética Avançada, clínica de referência em Palmas, Tocantins, cada atendimento reflete o compromisso com a excelência, o cuidado individualizado e a valorização da autoestima, proporcionando confiança e bem-estar aos pacientes.
 </p>
+                </div>
             </div>
         </div>
     </section>
@@ -876,26 +897,6 @@
         </div>
     </div>
 </section>
-    <!-- Contato -->
-    <section id="contato" class="section contact-section">
-        <h2 class="section-title">Agende Sua Avaliação</h2>
-        <div class="contact-container">
-            <div class="contact-image">
-                <img src="https://convidatasshop.wordpress.com/wp-content/uploads/2026/01/img_4721.jpg?w=768" alt="Agendamento">
-            </div>
-            <form class="contact-form" id="contactForm">
-                <div class="form-group">
-                    <label for="name">Nome Completo</label>
-                    <input type="text" id="name" required placeholder="Digite seu nome">
-                </div>
-                <div class="form-group">
-                    <label for="email">E-mail</label>
-                    <input type="email" id="email" required placeholder="Digite seu e-mail">
-                </div>
-                <button type="submit" class="btn" style="width: 100%">Entrar em Contato</button>
-            </form>
-        </div>
-    </section>
   
   <!-- Instagram -->
 <section class="section instagram-section">
@@ -1028,30 +1029,85 @@
     });
 
     /* ============================
-       Formulário → WhatsApp
+       Leia Mais (Sobre)
     ============================ */
-    document.getElementById('contactForm')?.addEventListener('submit', e => {
-        e.preventDefault();
+    document.getElementById('readMoreBtn')?.addEventListener('click', () => {
+        document.getElementById('moreAbout').style.display = 'block';
+        document.getElementById('readMoreBtn').style.display = 'none';
+    });
 
-        const name = document.getElementById('name').value.trim();
-        const email = document.getElementById('email').value.trim();
+ /* ============================
+   Formulário → WhatsApp IMEDIATO
+   + Registro em background
+============================ */
 
-        if (!name || !email.includes('@')) {
-            alert('Por favor, preencha nome e um e-mail válido!');
-            return;
-        }
-const message = `Olá! Meu nome é *${name}* (${email}). Gostaria de agendar uma avaliação na clínica.`;
+const scriptURL = 'https://script.google.com/macros/s/AKfycbyjfENhBraUpDHXYYX7ugfsAYdblikNWLN5J0sFRLY5SvJVwj19Y2qgSLNoRVg-313k/exec';
 
-// Conversão Google Ads - Agendar Avaliação
-gtag('event', 'conversion', {
-    'send_to': 'AW-123456789/AGENDA123'
-});
+const form = document.getElementById('contactForm');
+const submitBtn = form?.querySelector('button[type="submit"]');
 
-// Abre o WhatsApp
-window.open(
-    `https://wa.me/5563999610812?text=${encodeURIComponent(message)}`,
-    '_blank'
-);
+form?.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    // trava botão para evitar múltiplos cliques
+    submitBtn.disabled = true;
+    submitBtn.innerText = 'Enviando...';
+
+    const name = document.getElementById('name').value.trim();
+    const phone = document.getElementById('phone').value.trim();
+    const messageText = document.getElementById('message').value.trim();
+
+    if (!name || !phone || !messageText) {
+        alert('Por favor, preencha todos os campos!');
+        submitBtn.disabled = false;
+        submitBtn.innerText = 'Agendar Avaliação';
+        return;
+    }
+
+    /* ==========
+       Google Ads
+    ========== */
+    gtag('event', 'conversion', {
+        send_to: 'AW-123456789/AGENDA123'
+    });
+
+    /* ==========
+       WhatsApp IMEDIATO
+    ========== */
+    const waMessage = `Olá! Meu nome é *${name}*. ${messageText}`;
+    window.open(
+        `https://wa.me/5563999610812?text=${encodeURIComponent(waMessage)}`,
+        '_blank'
+    );
+
+    /* ==========
+       Envio para planilha (sem esperar)
+    ========== */
+    fetch(scriptURL, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams({
+            name: name,
+            phone: phone,
+            message: messageText
+        })
+    })
+    .then(() => {
+        console.log('Lead registrado com sucesso');
+    })
+    .catch(err => {
+        console.error('Erro ao registrar lead:', err);
+    });
+
+    /* ==========
+       Reset visual
+    ========== */
+    form.reset();
+
+    setTimeout(() => {
+        submitBtn.disabled = false;
+        submitBtn.innerText = 'Agendar Avaliação';
+    }, 3000);
 });
 
     /* ============================
@@ -1083,8 +1139,3 @@ window.open(
     </script>
 </body>
 </html>
-
-
-
-
-
