@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  
-  
+ 
   <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=AW-123456789"></script>
 <script>
@@ -11,20 +10,17 @@
   gtag('js', new Date());
   gtag('config', 'AW-123456789');
 </script>
-
-  
+ 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ricardo Ramos | Estética Avançada</title>
-    
+   
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
-
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-
     <style>
         :root {
             --primary-color: #A27658;
@@ -35,17 +31,14 @@
             --text-color: #333333;
             --transition: all 0.3s ease;
         }
-
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-
         html {
             scroll-behavior: smooth;
         }
-
         body {
             font-family: 'Montserrat', sans-serif;
             color: var(--text-color);
@@ -53,16 +46,13 @@
             background-color: var(--white);
             overflow-x: hidden;
         }
-
         h1, h2, h3, h4, h5, h6 {
             font-weight: 700;
             margin-bottom: 1rem;
         }
-
         a { text-decoration: none; color: inherit; }
         ul { list-style: none; }
         img { max-width: 100%; display: block; }
-
         .btn {
             display: inline-block;
             padding: 12px 30px;
@@ -76,24 +66,20 @@
             border: 2px solid var(--primary-color);
             cursor: pointer;
         }
-
         .btn:hover {
             background-color: transparent;
             color: var(--primary-color);
             transform: translateY(-2px);
         }
-
         .btn-outline {
             background-color: transparent;
             border: 2px solid var(--white);
             color: var(--white);
         }
-
         .btn-outline:hover {
             background-color: var(--white);
             color: var(--primary-color);
         }
-
         /* Navbar */
         .navbar {
             position: fixed;
@@ -108,31 +94,25 @@
             z-index: 1000;
             box-shadow: 0 2px 10px rgba(0,0,0,0.1);
         }
-
         .logo img { height: 50px; }
-
         .nav-links {
             display: flex;
             gap: 2rem;
             align-items: center;
         }
-
         .nav-links li a {
             font-weight: 500;
             font-size: 0.9rem;
             text-transform: uppercase;
             transition: var(--transition);
         }
-
         .nav-links li a:hover { color: var(--primary-color); }
-
         .menu-toggle {
             display: none;
             font-size: 1.5rem;
             cursor: pointer;
             color: var(--primary-color);
         }
-
         /* Hero */
         .hero {
             position: relative;
@@ -144,21 +124,18 @@
             text-align: center;
             color: var(--white);
         }
-
         .hero-overlay {
             position: absolute;
             top: 0; left: 0;
             width: 100%; height: 100%;
             background: rgba(0, 0, 0, 0.4);
         }
-
         .hero-content {
             position: relative;
             z-index: 1;
             max-width: 800px;
             padding: 0 20px;
         }
-
         .hero-subtitle {
             font-size: 1.1rem;
             margin-bottom: 2rem;
@@ -168,12 +145,10 @@
             margin-left: auto;
             margin-right: auto;
         }
-
         /* Sections */
         .section {
             padding: 5rem 5%;
         }
-
         .section-title {
             text-align: center;
             font-size: 2.5rem;
@@ -181,7 +156,6 @@
             margin-bottom: 3rem;
             position: relative;
         }
-
         .section-title::after {
             content: '';
             display: block;
@@ -190,20 +164,17 @@
             background-color: var(--secondary-color);
             margin: 10px auto 0;
         }
-
         /* Services */
         .services-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
         }
-
         @media (min-width: 1025px) {
             .services-grid {
                 grid-template-columns: repeat(4, 1fr);
             }
         }
-
         .service-card {
             background: var(--white);
             border-radius: 10px;
@@ -211,18 +182,15 @@
             box-shadow: 0 5px 15px rgba(0,0,0,0.05);
             transition: var(--transition);
         }
-
         .service-card:hover {
             transform: translateY(-5px);
             box-shadow: 0 10px 20px rgba(0,0,0,0.1);
         }
-
         .carousel {
             position: relative;
             height: 250px;
             overflow: hidden;
         }
-
         .carousel-slide {
             width: 100%;
             height: 100%;
@@ -231,9 +199,7 @@
             opacity: 0;
             transition: opacity 0.5s ease;
         }
-
         .carousel-slide.active { opacity: 1; }
-
         .carousel-btn {
             position: absolute;
             top: 50%;
@@ -253,24 +219,18 @@
             justify-content: center;
             transition: var(--transition);
         }
-
         .carousel-btn:hover { background: var(--white); }
         .prev { left: 10px; }
         .next { right: 10px; }
-
         .service-info {
             padding: 1.5rem;
             text-align: center;
         }
-
         .service-info h3 { color: var(--primary-color); margin-bottom: 1rem; }
         .service-info p { font-size: 0.9rem; color: #666; margin-bottom: 1.5rem; }
-
         /* FAQ */
         .faq-section { background-color: var(--light-bg); }
-
         .accordion { max-width: 800px; margin: 0 auto; }
-
         .accordion-item {
             background: var(--white);
             margin-bottom: 1rem;
@@ -278,7 +238,6 @@
             box-shadow: 0 2px 5px rgba(0,0,0,0.05);
             overflow: hidden;
         }
-
         .accordion-header {
             padding: 1.5rem;
             cursor: pointer;
@@ -289,25 +248,19 @@
             color: var(--primary-color);
             transition: var(--transition);
         }
-
         .accordion-header:hover { background-color: rgba(162, 118, 88, 0.05); }
-
         .accordion-icon { transition: transform 0.3s ease; }
-
         .accordion-item.active .accordion-icon { transform: rotate(180deg); }
-
         .accordion-body {
             max-height: 0;
             overflow: hidden;
             transition: max-height 0.3s ease;
             padding: 0 1.5rem;
         }
-
         .accordion-body p {
             padding-bottom: 1.5rem;
             color: #666;
         }
-
         /* Location */
         .location-content {
             display: grid;
@@ -315,24 +268,19 @@
             gap: 3rem;
             align-items: center;
         }
-
         .map-container {
             border-radius: 10px;
             overflow: hidden;
             height: 300px;
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
         }
-
         /* Contact */
         .contact-section {
             background-color: var(--primary-color);
             color: var(--white);
         }
-
         .contact-section .section-title { color: var(--white); }
-
         .contact-section .section-title::after { background-color: var(--secondary-color); }
-
         .contact-container {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -341,28 +289,23 @@
             margin: 0 auto;
             align-items: center;
         }
-
         .contact-image img {
             border-radius: 20px;
             box-shadow: 0 10px 30px rgba(0,0,0,0.2);
         }
-
         .contact-form {
             background: var(--white);
             padding: 2.5rem;
             border-radius: 20px;
             color: var(--text-color);
         }
-
         .form-group { margin-bottom: 1.5rem; }
-
         .form-group label {
             display: block;
             margin-bottom: 0.5rem;
             font-weight: 600;
             color: var(--primary-color);
         }
-
         .form-group input, .form-group textarea {
             width: 100%;
             padding: 12px;
@@ -371,7 +314,6 @@
             font-family: inherit;
             font-size: 1rem;
         }
-
         /* About */
         .about-container {
             display: grid;
@@ -379,17 +321,14 @@
             gap: 0;
             align-items: center;
         }
-
         .about-text { padding: 4rem; }
         .about-text h3 { color: var(--primary-color); font-size: 2rem; margin-bottom: 1.5rem; }
-
         .about-image img {
             width: 100%;
             height: 100%;
             object-fit: cover;
           border-radius: 30px; /* arredondamento */
         }
-
         /* Footer */
         footer {
             background-color: var(--dark-bg);
@@ -397,13 +336,11 @@
             padding: 3rem 5% 1rem;
             text-align: center;
         }
-
         .social-links a {
             color: white;
             margin: 0 10px;
             font-size: 1.5rem;
         }
-
         .copyright {
             margin-top: 3rem;
             padding-top: 1rem;
@@ -411,7 +348,6 @@
             font-size: 0.8rem;
             color: #888;
         }
-
         /* WhatsApp Float */
         .whatsapp-float {
             position: fixed;
@@ -430,12 +366,10 @@
             z-index: 1000;
             transition: var(--transition);
         }
-
         .whatsapp-float:hover {
             transform: scale(1.1);
             background-color: #128C7E;
         }
-
         /* Responsive */
         @media (max-width: 768px) {
             .nav-links {
@@ -450,15 +384,12 @@
                 text-align: center;
                 box-shadow: 0 5px 10px rgba(0,0,0,0.1);
             }
-
             .nav-links.active { display: flex; }
             .menu-toggle { display: block; }
-
             .contact-container, .location-content, .about-container {
                 grid-template-columns: 1fr;
                 gap: 2rem;
             }
-
             .contact-image, .about-image { order: -1; }
         }
       /* Testimonials */
@@ -468,7 +399,6 @@
     margin: 0 auto;
     text-align: center;
 }
-
 .testimonial {
     display: none;
     background: white;
@@ -476,36 +406,31 @@
     border-radius: 20px;
     box-shadow: 0 10px 30px rgba(0,0,0,.1);
 }
-
 .testimonial.active {
     display: block;
 }
-
 .testimonial p {
     font-size: 1.1rem;
     font-style: italic;
     color: #555;
     margin-bottom: 1.5rem;
 }
-
 .testimonial h4 {
     color: var(--primary-color);
     font-weight: 700;
 }
-      
+     
       /* Instagram Section */
 .instagram-section {
     background-color: var(--light-bg);
     text-align: center;
 }
-
 .instagram-subtitle {
     max-width: 600px;
     margin: 0 auto 2.5rem;
     font-size: 1rem;
     color: #666;
 }
-
 .instagram-preview {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -513,34 +438,45 @@
     max-width: 900px;
     margin: 0 auto 3rem;
 }
-
 .instagram-preview img {
     width: 100%;
     border-radius: 20px;
     transition: var(--transition);
     box-shadow: 0 10px 25px rgba(0,0,0,0.12);
 }
-
 .instagram-preview img:hover {
     transform: scale(1.05);
 }
-
 .instagram-btn {
     padding: 14px 40px;
 }
-
 /* Mobile */
 @media (max-width: 768px) {
     .instagram-preview {
         grid-template-columns: 1fr;
         max-width: 350px;
     }
+ 
+ 
 }
+
+        /* ==============================================
+           CORREÇÕES ADICIONADAS
+           ============================================== */
+
+        /* 1. Espaçamento entre os parágrafos da seção Sobre Mim */
+        .about-text p {
+            margin-bottom: 1.8rem;   /* espaço entre parágrafos – pode aumentar para 2rem ou 2.2rem se quiser mais */
+        }
+
+        /* 2. Mais espaço entre o último parágrafo visível e o botão "Leia mais" */
+        #readMoreBtn {
+            margin-top: 2.5rem;      /* ≈ 40px – pode aumentar para 3rem ou 3.5rem se quiser mais distância */
+        }
 
     </style>
 </head>
 <body>
-
     <!-- Navbar -->
     <nav class="navbar">
         <div class="logo">
@@ -553,7 +489,7 @@
             <li><a href="#sobre">Sobre Mim</a></li>
             <li><a href="#duvidas">Dúvidas</a></li>
           <li><a href="#clientes">Clientes</a></li>
-            <li><a 
+            <li><a
   href="#contato"
   class="btn"
   onclick="gtag('event','conversion',{'send_to':'AW-123456789/AGENDA123'})"
@@ -562,7 +498,6 @@
 </a></li>
         </ul>
     </nav>
-
     <!-- Hero -->
     <section id="inicio" class="hero">
         <div class="hero-overlay"></div>
@@ -572,7 +507,6 @@
             <a href="#servicos" class="btn btn-outline" onclick="gtag('event','conversion',{'send_to':'AW-123456789/SERVICOS123'})">Conheça Meus Serviços</a>
         </div>
     </section>
-
     <!-- Services -->
     <section id="servicos" class="section">
         <h2 class="section-title">Conheça Meus Serviços</h2>
@@ -594,7 +528,6 @@
 </a>
                 </div>
             </div>
-
             <!-- Service 2 -->
             <div class="service-card">
                 <div class="carousel">
@@ -606,16 +539,14 @@
                 <div class="service-info">
                     <h3>Fios Faciais para Mini Lifting</h3>
                     <p>Os fios faciais para mini lifting são um procedimento minimamente invasivo indicado para tratar a flacidez facial leve a moderada, promovendo sustentação da pele, melhora do contorno facial e estimulação do colágeno. </p>
-                  
+                 
                   <p>Utiliza fios absorvíveis e biocompatíveis, com resultados naturais e progressivos, planejados de forma individualizada para garantir segurança e harmonia.</p>
-
 <p>Indicações: flacidez facial, perda do contorno da mandíbula, queda do terço médio da face e definição do pescoço.</p>
                     <a href="https://wa.me/5563999610812?text=Olá! Gostaria de saber mais sobre Fios Faciais para Mini Lifting." class="btn" target="_blank" onclick="gtag('event','conversion',{'send_to':'AW-123456789/SERVICO123'})">
   Saiba mais
 </a>
                 </div>
             </div>
-
             <!-- Service 3 -->
             <div class="service-card">
                 <div class="carousel">
@@ -633,7 +564,6 @@
 </a>
                 </div>
             </div>
-
             <!-- Service 4 -->
             <div class="service-card">
                 <div class="carousel">
@@ -650,7 +580,6 @@
 </a>
                 </div>
             </div>
-
             <!-- Service 5 -->
             <div class="service-card">
                 <div class="carousel">
@@ -719,7 +648,6 @@
             </div>
         </div>
     </section>
-
     <!-- Contato -->
     <section id="contato" class="section contact-section">
         <h2 class="section-title">Agende Sua Avaliação</h2>
@@ -744,15 +672,14 @@
             </form>
         </div>
     </section>
-  
+ 
   <!-- Clientes -->
 <section id="clientes" class="section" style="background:#f9f9f9">
     <h2 class="section-title">O que nossos clientes dizem</h2>
-
     <!-- Vídeo YouTube -->
     <div style="max-width:800px;margin:0 auto 3rem;border-radius:20px;overflow:hidden;box-shadow:0 10px 30px rgba(0,0,0,.15)">
-<iframe 
-    width="100%" 
+<iframe
+    width="100%"
     height="450"
     src="https://www.youtube.com/embed/XhWQwCZk6c8"
     title="Depoimento de Cliente"
@@ -761,46 +688,39 @@
     allowfullscreen>
 </iframe>
     </div>
-
     <!-- Carrossel de Depoimentos -->
     <div class="testimonials-carousel">
-
         <div class="testimonial active">
             <p>“O Ricardo é um excelente profissional. Venho realizando procedimentos faciais com ele há dois anos e só elogios. Que continue assim cuidadoso, criterioso, atualizado e prestativo. Faz uso de produtos de alta qualidade reconhecidos no mercado. Recomendo!”</p>
             <h4>Paula Sousa</h4>
         </div>
-
         <div class="testimonial">
             <p>“Fui atendida na Clínica Dr. Ricardo Estética Avançada e tive uma experiência excelente. Desde a recepção, o atendimento foi atencioso, profissional e humanizado. O ambiente da clínica é moderno, organizado e transmite muita confiança e conforto.Amo essa clínica!”</p>
             <h4>Mikaelle Carvalho</h4>
         </div>
-
         <div class="testimonial">
             <p>“A clínica é simplesmente impecável! O ambiente é lindo, super acolhedor, tudo muito limpo, organizado e com um perfume delicioso no ar. Dá vontade de ficar lá só curtindo o clima. O atendimento é extremamente profissional, a equipe é atenciosa, cuidadosa e faz questão de explicar cada detalhe dos procedimentos. Dá pra sentir que tudo é feito com muita responsabilidade e carinho. Recomendo de olhos fechados!”</p>
             <h4>Thyago Borges</h4>
         </div>
-      
+     
         <div class="testimonial">
             <p>“Ao Dr. Ricardo Ramos somente gratidão pelo atendimento de excelência em seus procedimentos realizados na clínica! Estou amando meus resultados”</p>
             <h4>C. Ramos</h4>
         </div>
-      
+     
         <div class="testimonial">
             <p>“Ambiente super agradável, atendimento excelente e o Dr Ricardo muito atencioso e perfeccionista nos seus procedimentos”</p>
             <h4>Vitória Fiametti</h4>
         </div>
-      
+     
         <div class="testimonial">
             <p>“O atendimento desde a recepção a consulta com o dr Ricardo, foi excelente. Um profissional muito competente e dedicado ao que faz. Estou muito satisfeita.”</p>
             <h4>Lucilene Farias</h4>
         </div>
-
         <button class="carousel-btn prev"><i class="fas fa-chevron-left"></i></button>
         <button class="carousel-btn next"><i class="fas fa-chevron-right"></i></button>
-
     </div>
 </section>
-
     <!-- FAQ -->
     <section id="duvidas" class="section faq-section">
         <h2 class="section-title">Dúvidas Frequentes</h2>
@@ -834,7 +754,6 @@
             </div>
         </div>
     </section>
-
     <!-- Sobre -->
     <section id="sobre" class="section">
         <div class="about-container">
@@ -855,7 +774,6 @@
             </div>
         </div>
     </section>
-
  <!-- Localização -->
 <section class="section">
     <h2 class="section-title">Conheça Nosso Espaço</h2>
@@ -866,15 +784,13 @@
                 <i class="fas fa-map-marker-alt"></i>
                 Avenida Joaquim Teotônio Segurado, quadra 101 Sul, lote 03, conjunto 1, Condomínio Executive Carpe Diem, Plano Diretor Sul, sala 407.
             </p>
-
             <div class="carousel" style="border-radius: 10px; margin-bottom: 20px;">
                 <img src="https://convidatasshop.wordpress.com/wp-content/uploads/2026/01/img_4722.jpg?w=768" class="carousel-slide active" alt="Espaço 1">
                 <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?q=80&w=2053&auto=format&fit=crop" class="carousel-slide" alt="Espaço 2">
                 <button class="carousel-btn prev"><i class="fas fa-chevron-left"></i></button>
                 <button class="carousel-btn next"><i class="fas fa-chevron-right"></i></button>
             </div>
-
-<a 
+<a
   href="https://maps.app.goo.gl/1aHTMr9ztfsWpU1a6"
   target="_blank"
   class="btn"
@@ -883,29 +799,26 @@
   Abrir no Google Maps
 </a>
         </div>
-
         <div class="map-container">
-            <iframe 
+            <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3926.8733936510584!2d-48.3342878!3d-10.190935699999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9324cb000c1feaf3%3A0xc7f2e70c75dfa63e!2sDr.%20Ricardo%20Ramos%20-%20Est%C3%A9tica%20Avan%C3%A7ada!5e0!3m2!1spt-BR!2sbr!4v1768869266818!5m2!1spt-BR!2sbr"
-                width="100%" 
-                height="100%" 
-                style="border:0;" 
-                allowfullscreen 
-                loading="lazy" 
+                width="100%"
+                height="100%"
+                style="border:0;"
+                allowfullscreen
+                loading="lazy"
                 referrerpolicy="no-referrer-when-downgrade">
             </iframe>
         </div>
     </div>
 </section>
-  
+ 
   <!-- Instagram -->
 <section class="section instagram-section">
     <h2 class="section-title">Acompanhe no Instagram</h2>
-
     <p class="instagram-subtitle">
         Acompanhe resultados naturais e bastidores da melhor clínica de Estética Avançada em Palmas-TO!
     </p>
-
     <div class="instagram-preview">
         <a href="https://www.instagram.com/drricardoramosbio/" target="_blank">
             <img src="https://convidatasshop.wordpress.com/wp-content/uploads/2026/01/whatsapp-image-2026-01-22-at-09.20.30.jpeg?w=563" alt="Instagram post 1">
@@ -917,9 +830,8 @@
             <img src="https://convidatasshop.wordpress.com/wp-content/uploads/2026/01/whatsapp-image-2026-01-22-at-09.20.30-1-1.jpeg?w=561" alt="Instagram post 3">
         </a>
     </div>
-
-    <a 
-        href="https://www.instagram.com/drricardoramosbio/" 
+    <a
+        href="https://www.instagram.com/drricardoramosbio/"
         target="_blank"
         class="btn instagram-btn"
         onclick="gtag('event','conversion',{'send_to':'AW-123456789/INSTA123'})"
@@ -927,8 +839,6 @@
         Seguir no Instagram
     </a>
 </section>
-
-
     <!-- Footer -->
     <footer>
         <div class="footer-logo">
@@ -940,9 +850,8 @@
         </div>
         <p class="copyright">© 2026 Ricardo Ramos Estética Avançada. Todos os direitos reservados.</p>
     </footer>
-
 <!-- WhatsApp Float -->
-<a 
+<a
     href="https://wa.me/5563999610812"
     class="whatsapp-float"
     target="_blank"
@@ -956,17 +865,14 @@
     ============================ */
     const menuToggle = document.querySelector('.menu-toggle');
     const navLinks = document.querySelector('.nav-links');
-
     menuToggle?.addEventListener('click', () => {
         navLinks.classList.toggle('active');
     });
-
     document.querySelectorAll('.nav-links a').forEach(link => {
         link.addEventListener('click', () => {
             navLinks.classList.remove('active');
         });
     });
-
     /* ============================
        Carrossel de Imagens (Serviços / Local)
     ============================ */
@@ -977,49 +883,38 @@
             this.prevBtn = element.querySelector('.prev');
             this.nextBtn = element.querySelector('.next');
             this.currentIndex = 0;
-
             if (this.slides.length > 0) {
                 this.slides[0].classList.add('active');
-
                 this.prevBtn?.addEventListener('click', () => this.prev());
                 this.nextBtn?.addEventListener('click', () => this.next());
-
                 setInterval(() => this.next(), 5000);
             }
         }
-
         show(index) {
             this.slides.forEach(s => s.classList.remove('active'));
             this.slides[index].classList.add('active');
         }
-
         next() {
             this.currentIndex = (this.currentIndex + 1) % this.slides.length;
             this.show(this.currentIndex);
         }
-
         prev() {
             this.currentIndex = (this.currentIndex - 1 + this.slides.length) % this.slides.length;
             this.show(this.currentIndex);
         }
     }
-
     document.querySelectorAll('.carousel').forEach(el => new Carousel(el));
-
     /* ============================
        Accordion (FAQ)
     ============================ */
     document.querySelectorAll('.accordion-item').forEach(item => {
         const header = item.querySelector('.accordion-header');
-
         header.addEventListener('click', () => {
             const isActive = item.classList.contains('active');
-
             document.querySelectorAll('.accordion-item').forEach(i => {
                 i.classList.remove('active');
                 i.querySelector('.accordion-body').style.maxHeight = null;
             });
-
             if (!isActive) {
                 item.classList.add('active');
                 const body = item.querySelector('.accordion-body');
@@ -1027,7 +922,6 @@
             }
         });
     });
-
     /* ============================
        Leia Mais (Sobre)
     ============================ */
@@ -1035,42 +929,33 @@
         document.getElementById('moreAbout').style.display = 'block';
         document.getElementById('readMoreBtn').style.display = 'none';
     });
-
  /* ============================
    Formulário → WhatsApp IMEDIATO
    + Registro em background
 ============================ */
-
 const scriptURL = 'https://script.google.com/macros/s/AKfycbyjfENhBraUpDHXYYX7ugfsAYdblikNWLN5J0sFRLY5SvJVwj19Y2qgSLNoRVg-313k/exec';
-
 const form = document.getElementById('contactForm');
 const submitBtn = form?.querySelector('button[type="submit"]');
-
 form?.addEventListener('submit', (e) => {
     e.preventDefault();
-
     // trava botão para evitar múltiplos cliques
     submitBtn.disabled = true;
     submitBtn.innerText = 'Enviando...';
-
     const name = document.getElementById('name').value.trim();
     const phone = document.getElementById('phone').value.trim();
     const messageText = document.getElementById('message').value.trim();
-
     if (!name || !phone || !messageText) {
         alert('Por favor, preencha todos os campos!');
         submitBtn.disabled = false;
         submitBtn.innerText = 'Agendar Avaliação';
         return;
     }
-
     /* ==========
        Google Ads
     ========== */
     gtag('event', 'conversion', {
         send_to: 'AW-123456789/AGENDA123'
     });
-
     /* ==========
        WhatsApp IMEDIATO
     ========== */
@@ -1079,7 +964,6 @@ form?.addEventListener('submit', (e) => {
         `https://wa.me/5563999610812?text=${encodeURIComponent(waMessage)}`,
         '_blank'
     );
-
     /* ==========
        Envio para planilha (sem esperar)
     ========== */
@@ -1098,44 +982,37 @@ form?.addEventListener('submit', (e) => {
     .catch(err => {
         console.error('Erro ao registrar lead:', err);
     });
-
     /* ==========
        Reset visual
     ========== */
     form.reset();
-
     setTimeout(() => {
         submitBtn.disabled = false;
         submitBtn.innerText = 'Agendar Avaliação';
     }, 3000);
 });
-
     /* ============================
        Carrossel de Depoimentos (Clientes)
     ============================ */
     const testimonials = document.querySelectorAll('#clientes .testimonial');
     let testimonialIndex = 0;
-
     function showTestimonial(index) {
         testimonials.forEach(t => t.classList.remove('active'));
         testimonials[index].classList.add('active');
     }
-
     document.querySelector('#clientes .next')?.addEventListener('click', () => {
         testimonialIndex = (testimonialIndex + 1) % testimonials.length;
         showTestimonial(testimonialIndex);
     });
-
     document.querySelector('#clientes .prev')?.addEventListener('click', () => {
         testimonialIndex =
             (testimonialIndex - 1 + testimonials.length) % testimonials.length;
         showTestimonial(testimonialIndex);
     });
-
     setInterval(() => {
         testimonialIndex = (testimonialIndex + 1) % testimonials.length;
         showTestimonial(testimonialIndex);
-    }, 6000);  
+    }, 6000);
     </script>
 </body>
 </html>
