@@ -11,7 +11,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ricardo Ramos | Estética Avançada</title>
-  
+ 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -126,26 +126,27 @@
             align-items: center;
             justify-content: center;
         }
-.hero-desktop {
-    background: url('https://ricardoramosbancodeimagens.wordpress.com/wp-content/uploads/2026/02/seja-bem-vindo-a-2.png') no-repeat center center/cover;
-    display: block;
-}
-.hero-mobile {
-    background: url('https://ricardoramosbancodeimagens.wordpress.com/wp-content/uploads/2026/02/seja-bem-vindo-a-story-1.png') no-repeat center center/cover;
-    display: none;
-}
+        .hero-desktop {
+            background: url('https://ricardoramosbancodeimagens.wordpress.com/wp-content/uploads/2026/02/seja-bem-vindo-a-2.png') no-repeat center center/cover;
+            display: block;
+        }
+        .hero-mobile {
+            background: url('https://ricardoramosbancodeimagens.wordpress.com/wp-content/uploads/2026/02/seja-bem-vindo-a-story-1.png') no-repeat center center/cover;
+            display: none;
         }
         .hero-buttons {
             position: absolute;
             bottom: 5%;
             display: flex;
             gap: 1.5rem;
+            z-index: 10;
         }
         .hero-buttons a {
             padding: 14px 50px;
             font-weight: bold;
             text-align: center;
             min-width: 280px;
+            border-radius: 8px;
         }
         @media (max-width: 768px) {
             .hero-desktop { display: none; }
@@ -155,26 +156,29 @@
                 transform: translateX(-50%);
                 flex-direction: column;
                 align-items: center;
-                gap: 1.5rem;
-                bottom: 12%; /* Mais para baixo no mobile */
+                gap: 1.2rem;
+                bottom: 10%; /* Mais para baixo no mobile */
+                width: 90%;
+                max-width: 400px;
             }
             .hero-buttons a {
-                width: 95%;
+                width: 100%;
                 padding: 16px 30px;
                 font-size: 1.05rem;
             }
             .hero {
-                padding-bottom: 20%;
+                padding-bottom: 25%;
             }
         }
         @media (min-width: 769px) {
             .hero-buttons {
-                right: 5%;
+                right: 8%;
                 flex-direction: column;
                 align-items: flex-end;
+                bottom: 8%;
             }
             .hero-buttons a {
-                width: 530px; /* Aumentado para esquerda, mantendo final à direita */
+                width: 420px; /* Largura equilibrada no desktop */
             }
         }
         /* Sections */
@@ -696,10 +700,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <!-- Services -->
     <section id="servicos" class="section">
-        <h2 class="section-title">Serviços  Estéticos  Disponíveis</h2>
+        <h2 class="section-title">Serviços Estéticos Disponíveis</h2>
         <p class="section-subtitle">Os serviços são definidos após avaliação individual, respeitando as necessidades, expectativas e características de cada paciente, com foco em cuidado, segurança e acompanhamento.</p>
         <div class="services-grid">
-            <!-- Service 1 -->
             <div class="service-card">
                 <div class="service-icon">
                     <img src="https://ricardoramosbancodeimagens.wordpress.com/wp-content/uploads/2026/02/img_7421.png?allow_lossy=1" alt="Toxina">
@@ -712,7 +715,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <a href="https://wa.me/5563999610812?text=Olá! Gostaria de saber mais sobre Toxina Botulínica (Botox)." class="btn" target="_blank">Saiba mais</a>
                 </div>
             </div>
-            <!-- Service 2 -->
             <div class="service-card">
                 <div class="service-icon">
                     <img src="https://ricardoramosbancodeimagens.wordpress.com/wp-content/uploads/2026/02/img_7422.png?allow_lossy=1" alt="Fios">
@@ -725,7 +727,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <a href="https://wa.me/5563999610812?text=Olá! Gostaria de saber mais sobre Fios Faciais para Mini Lifting." class="btn" target="_blank">Saiba mais</a>
                 </div>
             </div>
-            <!-- Service 3 -->
             <div class="service-card">
                 <div class="service-icon">
                     <img src="https://ricardoramosbancodeimagens.wordpress.com/wp-content/uploads/2026/02/img_7424.png?allow_lossy=1" alt="Preenchimentos">
@@ -738,7 +739,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <a href="https://wa.me/5563999610812?text=Olá! Gostaria de saber mais sobre Preenchimentos Faciais e Harmonização Facial." class="btn" target="_blank">Saiba mais</a>
                 </div>
             </div>
-            <!-- Service 4 -->
             <div class="service-card">
                 <div class="service-icon">
                     <img src="https://ricardoramosbancodeimagens.wordpress.com/wp-content/uploads/2026/02/corpo.png?allow_lossy=1" alt="Procedimentos Corporais">
@@ -751,7 +751,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <a href="https://wa.me/5563999610812?text=Olá! Gostaria de saber mais sobre Preenchimentos Corporais (Glúteos e Região Íntima)." class="btn" target="_blank">Saiba mais</a>
                 </div>
             </div>
-            <!-- Service 5 -->
             <div class="service-card">
                 <div class="service-icon">
                     <img src="https://ricardoramosbancodeimagens.wordpress.com/wp-content/uploads/2026/02/img_7417.png?allow_lossy=1" alt="Skinbooster">
@@ -764,7 +763,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <a href="https://wa.me/5563999610812?text=Olá! Gostaria de saber mais sobre Skinbooster." class="btn" target="_blank">Saiba mais</a>
                 </div>
             </div>
-            <!-- Service 6 -->
             <div class="service-card">
                 <div class="service-icon">
                     <img src="https://ricardoramosbancodeimagens.wordpress.com/wp-content/uploads/2026/02/img_7418.png?allow_lossy=1" alt="New Skin">
@@ -777,7 +775,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <a href="https://wa.me/5563999610812?text=Olá! Gostaria de saber mais sobre o Protocolo New Skin." class="btn" target="_blank">Saiba mais</a>
                 </div>
             </div>
-            <!-- Service 7 -->
             <div class="service-card">
                 <div class="service-icon">
                     <img src="https://ricardoramosbancodeimagens.wordpress.com/wp-content/uploads/2026/02/img_7419.png?allow_lossy=1" alt="Endolifting">
@@ -790,7 +787,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <a href="https://wa.me/5563999610812?text=Olá! Gostaria de saber mais sobre Endolifting Facial e Corporal." class="btn" target="_blank">Saiba mais</a>
                 </div>
             </div>
-            <!-- Service 8 -->
             <div class="service-card">
                 <div class="service-icon">
                     <img src="https://ricardoramosbancodeimagens.wordpress.com/wp-content/uploads/2026/02/img_7420.png?allow_lossy=1" alt="Bioestimuladores">
@@ -810,12 +806,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <section id="contato" class="section contact-section">
         <h2 class="section-title">Agende Sua Avaliação</h2>
         <div class="contact-container">
- <div class="contact-image">
-    <img src="https://ricardoramosbancodeimagens.wordpress.com/wp-content/uploads/2026/02/design-sem-nome-19.png" alt="Agendamento PC">
-</div>
-<div class="contact-image-mobile">
-    <img src="https://ricardoramosbancodeimagens.wordpress.com/wp-content/uploads/2026/02/design-sem-nome-19.png" alt="Agendamento Mobile">
-</div>
+            <div class="contact-image">
+                <img src="https://ricardoramosbancodeimagens.wordpress.com/wp-content/uploads/2026/02/design-sem-nome-19.png" alt="Agendamento PC">
+            </div>
+            <div class="contact-image-mobile">
+                <img src="https://ricardoramosbancodeimagens.wordpress.com/wp-content/uploads/2026/02/design-sem-nome-19.png" alt="Agendamento Mobile">
+            </div>
             <form class="contact-form" id="contactForm">
                 <div class="form-group">
                     <label for="name">Nome Completo</label>
@@ -955,9 +951,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- Sobre -->
     <section id="sobre" class="section">
         <div class="about-container">
-<div class="about-image">
-    <img src="https://ricardoramosbancodeimagens.wordpress.com/wp-content/uploads/2026/02/design-sem-nome-17.png" alt="Ricardo Ramos Profissional">
-</div>
+            <div class="about-image">
+                <img src="https://ricardoramosbancodeimagens.wordpress.com/wp-content/uploads/2026/02/design-sem-nome-17.png" alt="Ricardo Ramos Profissional">
+            </div>
             <div class="about-text">
                 <h3>Ricardo Ramos</h3>
                 <p>Ricardo Ramos é especialista em estética avançada, com 11 anos de atuação na área estética, oferecendo procedimentos estéticos faciais e corporais em Palmas, Tocantins, sempre com foco em segurança, individualização e naturalidade.</p>
