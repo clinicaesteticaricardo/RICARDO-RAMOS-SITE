@@ -1,28 +1,26 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-
- <!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-PS5FCZ9R');</script>
-<!-- End Google Tag Manager -->
- 
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-PS5FCZ9R');</script>
+    <!-- End Google Tag Manager -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ricardo Ramos | Estética Avançada</title>
-   
+  
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Poppins:wght@400;700&family=Playfair+Display:ital@1&display=swap" rel="stylesheet">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         :root {
-            --primary-color: #A27658;
+            --primary-color: #A3785C;
             --secondary-color: #CFB79A;
             --dark-bg: #1a1a1a;
             --light-bg: #f9f9f9;
@@ -54,30 +52,24 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         img { max-width: 100%; display: block; }
         .btn {
             display: inline-block;
-            padding: 12px 30px;
-            background-color: var(--primary-color);
+            padding: 10px 25px;
+            background-color: transparent;
             color: var(--white);
-            border-radius: 50px;
-            font-weight: 600;
-            text-transform: uppercase;
-            font-size: 0.9rem;
+            border-radius: 8px;
+            font-weight: 500;
+            font-size: 0.85rem;
             transition: var(--transition);
-            border: 2px solid var(--primary-color);
+            border: 1px solid var(--white);
             cursor: pointer;
+            text-transform: uppercase;
         }
         .btn:hover {
-            background-color: transparent;
-            color: var(--primary-color);
+            background-color: rgba(255,255,255,0.1);
             transform: translateY(-2px);
         }
-        .btn-outline {
-            background-color: transparent;
-            border: 2px solid var(--white);
-            color: var(--white);
-        }
-        .btn-outline:hover {
-            background-color: var(--white);
-            color: var(--primary-color);
+        .btn-hero {
+            text-transform: none;
+            font-weight: bold;
         }
         /* Navbar */
         .navbar {
@@ -104,8 +96,21 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             font-size: 0.9rem;
             text-transform: uppercase;
             transition: var(--transition);
+            color: var(--text-color);
         }
         .nav-links li a:hover { color: var(--primary-color); }
+        .nav-links .btn {
+            background-color: var(--primary-color);
+            color: var(--white);
+            border: 1px solid var(--primary-color);
+            padding: 10px 20px;
+            font-size: 0.85rem;
+        }
+        .nav-links .btn:hover {
+            background-color: transparent;
+            color: var(--primary-color);
+            border-color: var(--primary-color);
+        }
         .menu-toggle {
             display: none;
             font-size: 1.5rem;
@@ -116,139 +121,257 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         .hero {
             position: relative;
             height: 100vh;
-            background: url('https://ricardoramosbancodeimagens.wordpress.com/wp-content/uploads/2026/02/capa.jpg.jpeg?w=1024&allow_lossy=1') no-repeat center center/cover;
+            color: var(--white);
             display: flex;
             align-items: center;
             justify-content: center;
-            text-align: center;
-            color: var(--white);
         }
-        .hero-overlay {
+.hero-desktop {
+    background: url('https://ricardoramosbancodeimagens.wordpress.com/wp-content/uploads/2026/02/seja-bem-vindo-a-2.png') no-repeat center center/cover;
+    display: block;
+}
+.hero-mobile {
+    background: url('https://ricardoramosbancodeimagens.wordpress.com/wp-content/uploads/2026/02/seja-bem-vindo-a-story-1.png') no-repeat center center/cover;
+    display: none;
+}
+        }
+        .hero-buttons {
             position: absolute;
-            top: 0; left: 0;
-            width: 100%; height: 100%;
-            background: rgba(0, 0, 0, 0.4);
+            bottom: 5%;
+            display: flex;
+            gap: 1.5rem;
         }
-        .hero-content {
-            position: relative;
-            z-index: 1;
-            max-width: 800px;
-            padding: 0 20px;
+        .hero-buttons a {
+            padding: 14px 50px;
+            font-weight: bold;
+            text-align: center;
+            min-width: 280px;
         }
-        .hero-subtitle {
-            font-size: 1.1rem;
-            margin-bottom: 2rem;
-            font-weight: 300;
-            line-height: 1.4;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
+        @media (max-width: 768px) {
+            .hero-desktop { display: none; }
+            .hero-mobile { display: block; }
+            .hero-buttons {
+                left: 50%;
+                transform: translateX(-50%);
+                flex-direction: column;
+                align-items: center;
+                gap: 1.5rem;
+                bottom: 12%; /* Mais para baixo no mobile */
+            }
+            .hero-buttons a {
+                width: 95%;
+                padding: 16px 30px;
+                font-size: 1.05rem;
+            }
+            .hero {
+                padding-bottom: 20%;
+            }
+        }
+        @media (min-width: 769px) {
+            .hero-buttons {
+                right: 5%;
+                flex-direction: column;
+                align-items: flex-end;
+            }
+            .hero-buttons a {
+                width: 530px; /* Aumentado para esquerda, mantendo final à direita */
+            }
         }
         /* Sections */
         .section {
-            padding: 5rem 5%;
+            padding: 4rem 5%;
         }
         .section-title {
             text-align: center;
-            font-size: 2.5rem;
+            font-family: 'Poppins', sans-serif;
+            font-size: 3rem;
+            letter-spacing: -0.075em;
             color: var(--primary-color);
-            margin-bottom: 3rem;
+            margin-bottom: 2rem;
             position: relative;
         }
         .section-title::after {
             content: '';
             display: block;
-            width: 60px;
-            height: 3px;
+            width: 50px;
+            height: 2px;
             background-color: var(--secondary-color);
-            margin: 10px auto 0;
+            margin: 8px auto 0;
+        }
+        .section-subtitle {
+            max-width: 800px;
+            margin: 0 auto 3rem;
+            text-align: center;
+            font-size: 1rem;
+            color: #666;
+        }
+        @media (max-width: 768px) {
+            .section-title {
+                font-size: 2rem;
+                line-height: 1.1;
+            }
         }
         /* Services */
         .services-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-        @media (min-width: 1025px) {
-            .services-grid {
-                grid-template-columns: repeat(4, 1fr);
-            }
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.5rem;
         }
         .service-card {
-            background: var(--white);
-            border-radius: 10px;
+            background: var(--primary-color);
+            border-radius: 15px;
             overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.05);
             transition: var(--transition);
+            text-align: left;
+            padding: 1.8rem;
+            border: 1px solid rgba(162, 118, 88, 0.1);
+            height: 420px;
+            display: flex;
+            flex-direction: column;
         }
         .service-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            transform: translateY(-4px);
+            box-shadow: 0 12px 35px rgba(0,0,0,0.1);
         }
-        .carousel {
-            position: relative;
-            height: 250px;
-            overflow: hidden;
+        .service-icon img {
+            width: 50px;
+            height: 50px;
+            margin-bottom: 1rem;
         }
-        .carousel-slide {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            position: absolute;
-            opacity: 0;
-            transition: opacity 0.5s ease;
+        .service-info h3 {
+            color: var(--white);
+            font-size: 1.15rem;
+            margin-bottom: 0.6rem;
+            line-height: 1.2;
         }
-        .carousel-slide.active { opacity: 1; }
-        .carousel-btn {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            background: rgba(255,255,255,0.7);
-            border: none;
-            padding: 10px;
-            cursor: pointer;
-            font-size: 1.2rem;
-            color: var(--primary-color);
-            z-index: 2;
-            border-radius: 50%;
-            width: 40px;
-            height: 40px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: var(--transition);
+        .service-info p {
+            font-size: 0.88rem;
+            color: var(--white);
+            margin-bottom: 1rem;
+            flex-grow: 1;
+            line-height: 1.45;
         }
-        .carousel-btn:hover { background: var(--white); }
-        .prev { left: 10px; }
-        .next { right: 10px; }
-        .service-info {
-            padding: 1.5rem;
+        .service-btn {
+            margin-top: auto;
             text-align: center;
         }
-        .service-info h3 { color: var(--primary-color); margin-bottom: 1rem; }
-        .service-info p { font-size: 0.9rem; color: #666; margin-bottom: 1.5rem; }
+        .service-btn a {
+            width: 80%;
+            padding: 12px 0;
+            border-color: var(--white);
+            color: var(--white);
+            font-size: 0.9rem;
+            display: inline-block;
+        }
+        @media (max-width: 768px) {
+            .services-grid {
+                display: flex;
+                overflow-x: auto;
+                scroll-snap-type: x mandatory;
+                gap: 1rem;
+                padding: 0 1rem;
+            }
+            .service-card {
+                flex: 0 0 85%;
+                scroll-snap-align: center;
+                height: auto;
+            }
+        }
+        /* Testimonials */
+        .testimonials-section {
+            background: var(--light-bg);
+        }
+        .testimonials-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: 0 auto;
+            gap: 2rem;
+        }
+        .testimonials-carousel {
+            flex: 1;
+        }
+        .testimonial {
+            display: none;
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0,0,0,.05);
+            border: 1px solid rgba(162, 118, 88, 0.1);
+            text-align: left;
+        }
+        .testimonial.active {
+            display: block;
+        }
+        .testimonial-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+        .testimonial-profile img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 1rem;
+        }
+        .testimonial-name {
+            font-weight: 600;
+            color: var(--primary-color);
+        }
+        .testimonial-stars {
+            color: #FFD700;
+            font-size: 1rem;
+            margin-top: 0.5rem;
+            margin-bottom: 2rem;
+            text-align: left;
+        }
+        .testimonial p {
+            font-size: 0.95rem;
+            color: #555;
+            line-height: 1.5;
+        }
+        .video-container {
+            flex: 1;
+        }
+        .video-container iframe {
+            border-radius: 12px;
+            width: 100%;
+            height: 350px;
+        }
+        @media (max-width: 768px) {
+            .testimonials-content {
+                flex-direction: column;
+            }
+            .video-container iframe {
+                height: 500px;
+            }
+        }
         /* FAQ */
         .faq-section { background-color: var(--light-bg); }
-        .accordion { max-width: 800px; margin: 0 auto; }
+        .accordion { max-width: 900px; margin: 0 auto; }
         .accordion-item {
             background: var(--white);
             margin-bottom: 1rem;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
             overflow: hidden;
+            border: 1px solid rgba(162, 118, 88, 0.1);
         }
         .accordion-header {
-            padding: 1.5rem;
+            padding: 1.2rem 1.5rem;
             cursor: pointer;
             display: flex;
             justify-content: space-between;
             align-items: center;
             font-weight: 600;
+            font-size: 1rem;
             color: var(--primary-color);
             transition: var(--transition);
         }
-        .accordion-header:hover { background-color: rgba(162, 118, 88, 0.05); }
-        .accordion-icon { transition: transform 0.3s ease; }
+        .accordion-header:hover { background-color: rgba(162, 118, 88, 0.03); }
+        .accordion-icon { transition: transform 0.3s ease; font-size: 1rem; }
         .accordion-item.active .accordion-icon { transform: rotate(180deg); }
         .accordion-body {
             max-height: 0;
@@ -257,61 +380,79 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             padding: 0 1.5rem;
         }
         .accordion-body p {
-            padding-bottom: 1.5rem;
+            padding: 1rem 0 1.5rem;
             color: #666;
-        }
-        /* Location */
-        .location-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 3rem;
-            align-items: center;
-        }
-        .map-container {
-            border-radius: 10px;
-            overflow: hidden;
-            height: 300px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            font-size: 0.95rem;
         }
         /* Contact */
         .contact-section {
-            background-color: var(--primary-color);
-            color: var(--white);
+            background-color: var(--light-bg);
         }
-        .contact-section .section-title { color: var(--white); }
-        .contact-section .section-title::after { background-color: var(--secondary-color); }
         .contact-container {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            max-width: 1000px;
+            gap: 3rem;
+            max-width: 1200px;
             margin: 0 auto;
             align-items: center;
         }
-        .contact-image img {
-            border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        .contact-image img, .contact-image-mobile img {
+            width: 100%;
+            height: auto;
+            border-radius: 0;
+            box-shadow: none;
+        }
+        .contact-image-mobile {
+            display: none;
         }
         .contact-form {
             background: var(--white);
-            padding: 2.5rem;
-            border-radius: 20px;
+            padding: 2rem;
+            border-radius: 15px;
             color: var(--text-color);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.05);
+            border: 1px solid rgba(162, 118, 88, 0.1);
         }
-        .form-group { margin-bottom: 1.5rem; }
+        .form-group { margin-bottom: 1.2rem; }
         .form-group label {
             display: block;
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.4rem;
             font-weight: 600;
             color: var(--primary-color);
+            font-size: 0.9rem;
         }
         .form-group input, .form-group textarea {
             width: 100%;
-            padding: 12px;
-            border: 1px solid #ddd;
+            padding: 10px;
+            border: 1px solid #eee;
             border-radius: 8px;
             font-family: inherit;
+            font-size: 0.95rem;
+        }
+        .contact-form button[type="submit"] {
+            width: 100%;
+            background: var(--white);
+            color: var(--primary-color);
+            border: 1px solid var(--primary-color);
+            border-radius: 8px;
+            padding: 14px;
+            font-weight: 600;
             font-size: 1rem;
+        }
+        .contact-form button[type="submit"]:hover {
+            background: var(--primary-color);
+            color: var(--white);
+        }
+        @media (max-width: 768px) {
+            .contact-container {
+                grid-template-columns: 1fr;
+            }
+            .contact-image {
+                display: none;
+            }
+            .contact-image-mobile {
+                display: block;
+            }
         }
         /* About */
         .about-container {
@@ -319,14 +460,136 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             grid-template-columns: 1fr 1fr;
             gap: 0;
             align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
         }
-        .about-text { padding: 4rem; }
-        .about-text h3 { color: var(--primary-color); font-size: 2rem; margin-bottom: 1.5rem; }
+        .about-text { padding: 3rem; }
+        .about-text h3 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 3rem;
+            letter-spacing: -0.075em;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+        .about-text p {
+            font-size: 0.95rem;
+            color: #666;
+            margin-bottom: 1.2rem;
+        }
         .about-image img {
             width: 100%;
             height: 100%;
             object-fit: cover;
-          border-radius: 30px; /* arredondamento */
+            border-radius: 0;
+        }
+        @media (max-width: 768px) {
+            .about-container {
+                grid-template-columns: 1fr;
+            }
+            .about-image {
+                order: -1;
+            }
+            .about-text {
+                padding: 2rem 5%;
+            }
+            .about-text h3 {
+                font-size: 2rem;
+            }
+        }
+        /* Location */
+        .location-section {
+            background: var(--light-bg);
+        }
+        .location-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            align-items: start;
+        }
+        .location-info {
+            padding: 2rem;
+            background: var(--white);
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.05);
+            border: 1px solid rgba(162, 118, 88, 0.1);
+        }
+        .location-details {
+            display: flex;
+            flex-direction: column;
+            gap: 1.2rem;
+            margin-bottom: 1.5rem;
+        }
+        .location-detail {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            font-size: 0.95rem;
+            color: #666;
+        }
+        .location-icon {
+            width: 32px;
+            height: 32px;
+        }
+        .location-carousel {
+            position: relative;
+            height: 250px;
+            overflow: hidden;
+            margin-bottom: 1.5rem;
+            border-radius: 12px;
+        }
+        .location-btn {
+            display: block;
+            margin: 1.5rem auto 0;
+            max-width: 280px;
+            text-align: center;
+            color: var(--primary-color);
+            border-color: var(--primary-color);
+            padding: 14px 30px;
+            font-weight: 600;
+            border-radius: 8px;
+        }
+        .map-container {
+            border-radius: 12px;
+            overflow: hidden;
+            height: 400px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        @media (max-width: 768px) {
+            .location-content {
+                grid-template-columns: 1fr;
+            }
+            .map-container {
+                height: 300px;
+            }
+            .location-btn {
+                width: 100%;
+                margin: 1rem 0 0;
+            }
+        }
+        /* Instagram */
+        .instagram-section {
+            background-color: var(--white);
+            text-align: center;
+        }
+        .instagram-subtitle {
+            max-width: 700px;
+            margin: 0 auto 2rem;
+            font-size: 0.95rem;
+            color: #666;
+        }
+        .instagram-feed {
+            max-width: 900px;
+            margin: 0 auto 2.5rem;
+        }
+        .instagram-btn {
+            display: inline-block;
+            max-width: 200px;
         }
         /* Footer */
         footer {
@@ -385,103 +648,26 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             }
             .nav-links.active { display: flex; }
             .menu-toggle { display: block; }
-            .contact-container, .location-content, .about-container {
-                grid-template-columns: 1fr;
-                gap: 2rem;
-            }
-            .contact-image, .about-image { order: -1; }
         }
-      /* Testimonials */
-.testimonials-carousel {
-    position: relative;
-    max-width: 700px;
-    margin: 0 auto;
-    text-align: center;
-}
-.testimonial {
-    display: none;
-    background: white;
-    padding: 2.5rem;
-    border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0,0,0,.1);
-}
-.testimonial.active {
-    display: block;
-}
-.testimonial p {
-    font-size: 1.1rem;
-    font-style: italic;
-    color: #555;
-    margin-bottom: 1.5rem;
-}
-.testimonial h4 {
-    color: var(--primary-color);
-    font-weight: 700;
-}
-     
-      /* Instagram Section */
-.instagram-section {
-    background-color: var(--light-bg);
-    text-align: center;
-}
-.instagram-subtitle {
-    max-width: 600px;
-    margin: 0 auto 2.5rem;
-    font-size: 1rem;
-    color: #666;
-}
-.instagram-preview {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.5rem;
-    max-width: 900px;
-    margin: 0 auto 3rem;
-}
-.instagram-preview img {
-    width: 100%;
-    border-radius: 20px;
-    transition: var(--transition);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.12);
-}
-.instagram-preview img:hover {
-    transform: scale(1.05);
-}
-.instagram-btn {
-    padding: 14px 40px;
-}
-/* Mobile */
-@media (max-width: 768px) {
-    .instagram-preview {
-        grid-template-columns: 1fr;
-        max-width: 350px;
-    }
- 
- 
-}
-
-        /* ==============================================
-           CORREÇÕES ADICIONADAS
-           ============================================== */
-
-        /* 1. Espaçamento entre os parágrafos da seção Sobre Mim */
-        .about-text p {
-            margin-bottom: 1.8rem;   /* espaço entre parágrafos – pode aumentar para 2rem ou 2.2rem se quiser mais */
+        /* Política de Privacidade */
+        #privacidade {
+            background: #f5f5f5;
         }
-
-        /* 2. Mais espaço entre o último parágrafo visível e o botão "Leia mais" */
-        #readMoreBtn {
-            margin-top: 2.5rem;      /* ≈ 40px – pode aumentar para 3rem ou 3.5rem se quiser mais distância */
+        #privacidade .content {
+            max-width: 900px;
+            margin: 0 auto;
+            color: #555;
+            font-size: 0.95rem;
+            line-height: 1.7;
         }
-
     </style>
 </head>
 <body>
-
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PS5FCZ9R"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
- 
+
     <!-- Navbar -->
     <nav class="navbar">
         <div class="logo">
@@ -493,183 +679,143 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <li><a href="#servicos">Meus Serviços</a></li>
             <li><a href="#sobre">Sobre Mim</a></li>
             <li><a href="#duvidas">Dúvidas</a></li>
-          <li><a href="#clientes">Clientes</a></li>
-            <li><a
-  href="#contato"
-  class="btn"
->
-  Agendar Avaliação
-</a></li>
+            <li><a href="#clientes">Clientes</a></li>
+            <li><a href="#contato" class="btn">Agendar Avaliação</a></li>
         </ul>
     </nav>
+
     <!-- Hero -->
     <section id="inicio" class="hero">
-        <div class="hero-overlay"></div>
-        <div class="hero-content">
-            <img src="https://ricardoramosbancodeimagens.wordpress.com/wp-content/uploads/2026/02/novo-projeto-4.webp?allow_lossy=1" alt="Ricardo Ramos" style="max-width: 300px; margin: 0 auto 2rem; display: block;">
-            <p class="hero-subtitle">Avaliação estética personalizada em Palmas – TO. Atendimento individualizado com foco em bem-estar, cuidado e protocolos modernos.</p>
-            <a href="#servicos" class="btn btn-outline" >Conheça Meus Serviços</a>
-          
-          <!-- ==================== NOVO BOTÃO WHATSAPP ==================== -->
-    <a href="https://wa.me/5563999610812?text=Olá! Vim pelo site" 
-       class="btn whatsapp-cta-hero" 
-       target="_blank"
-       style="margin-top: 18px; background:#25D366; border-color:#25D366;">
-        Falar no WhatsApp
-    </a>
-    <!-- ============================================================= -->
-          
+        <div class="hero-desktop" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></div>
+        <div class="hero-mobile" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></div>
+        <div class="hero-buttons">
+            <a href="#servicos" class="btn btn-hero">Conheça meus serviços</a>
+            <a href="https://wa.me/5563999610812?text=Olá! Vim pelo site" class="btn btn-hero">Falar no WhatsApp</a>
         </div>
     </section>
+
     <!-- Services -->
     <section id="servicos" class="section">
-        <h2 class="section-title">Serviços Estéticos Disponíveis</h2>
-                 <p class="hero-subtitle">Os serviços são definidos após avaliação individual, respeitando as necessidades, expectativas e características de cada paciente, com foco em cuidado, segurança e acompanhamento.</p>
-
+        <h2 class="section-title">Serviços  Estéticos  Disponíveis</h2>
+        <p class="section-subtitle">Os serviços são definidos após avaliação individual, respeitando as necessidades, expectativas e características de cada paciente, com foco em cuidado, segurança e acompanhamento.</p>
         <div class="services-grid">
             <!-- Service 1 -->
             <div class="service-card">
-                <div class="carousel">
-                    <img src="https://ricardoramosbancodeimagens.wordpress.com/wp-content/uploads/2026/02/botox-1-1.png?w=768&allow_lossy=1" class="carousel-slide active" alt="Preenchimento Labial">
-                    <img src="https://ricardoramosbancodeimagens.wordpress.com/wp-content/uploads/2026/02/whatsapp-image-2026-02-05-at-14.03.27.jpeg?w=1024&allow_lossy=1" class="carousel-slide" alt="Preenchimento Labial 2">
-                    <button class="carousel-btn prev"><i class="fas fa-chevron-left"></i></button>
-                    <button class="carousel-btn next"><i class="fas fa-chevron-right"></i></button>
+                <div class="service-icon">
+                    <img src="https://ricardoramosbancodeimagens.wordpress.com/wp-content/uploads/2026/02/img_7421.png?allow_lossy=1" alt="Toxina">
                 </div>
                 <div class="service-info">
                     <h3>Toxina Botulínica – Aplicação Estética Personalizada</h3>
                     <p>Procedimento estético realizado após avaliação profissional, com foco em cuidado, aparência e acompanhamento individual.</p>
-                    <a href="https://wa.me/5563999610812?text=Olá! Gostaria de saber mais sobre Toxina Botulínica (Botox)." class="btn" target="_blank">
-  Saiba mais
-</a>
+                </div>
+                <div class="service-btn">
+                    <a href="https://wa.me/5563999610812?text=Olá! Gostaria de saber mais sobre Toxina Botulínica (Botox)." class="btn" target="_blank">Saiba mais</a>
                 </div>
             </div>
             <!-- Service 2 -->
             <div class="service-card">
-                <div class="carousel">
-                    <img src="https://ricardoramosbancodeimagens.wordpress.com/wp-content/uploads/2026/02/whatsapp-image-2026-02-05-at-14.02.28.jpeg?w=768&allow_lossy=1" class="carousel-slide active" alt="Fios PDO">
-                    <img src="https://ricardoramosbancodeimagens.wordpress.com/wp-content/uploads/2026/02/whatsapp-image-2026-02-05-at-14.02.11.jpeg?allow_lossy=1" class="carousel-slide" alt="Fios PDO 2">
-                    <button class="carousel-btn prev"><i class="fas fa-chevron-left"></i></button>
-                    <button class="carousel-btn next"><i class="fas fa-chevron-right"></i></button>
+                <div class="service-icon">
+                    <img src="https://ricardoramosbancodeimagens.wordpress.com/wp-content/uploads/2026/02/img_7422.png?allow_lossy=1" alt="Fios">
                 </div>
                 <div class="service-info">
                     <h3>Fios Faciais – Sustentação e Contorno Facial</h3>
                     <p>Procedimento estético realizado após avaliação profissional, com foco em cuidado, aparência e acompanhamento individual.</p>
-
-                    <a href="https://wa.me/5563999610812?text=Olá! Gostaria de saber mais sobre Fios Faciais para Mini Lifting." class="btn" target="_blank">
-  Saiba mais
-</a>
+                </div>
+                <div class="service-btn">
+                    <a href="https://wa.me/5563999610812?text=Olá! Gostaria de saber mais sobre Fios Faciais para Mini Lifting." class="btn" target="_blank">Saiba mais</a>
                 </div>
             </div>
             <!-- Service 3 -->
             <div class="service-card">
-                <div class="carousel">
-                    <img src="https://ricardoramosbancodeimagens.wordpress.com/wp-content/uploads/2026/02/whatsapp-image-2026-02-05-at-14.01.44.jpeg?w=1024&allow_lossy=1" class="carousel-slide active" alt="Toxina Botulínica">
-                    <img src="https://ricardoramosbancodeimagens.wordpress.com/wp-content/uploads/2026/02/whatsapp-image-2026-02-05-at-14.01.32.jpeg?w=1024&allow_lossy=1" class="carousel-slide" alt="Toxina Botulínica 2">
-                    <button class="carousel-btn prev"><i class="fas fa-chevron-left"></i></button>
-                    <button class="carousel-btn next"><i class="fas fa-chevron-right"></i></button>
+                <div class="service-icon">
+                    <img src="https://ricardoramosbancodeimagens.wordpress.com/wp-content/uploads/2026/02/img_7424.png?allow_lossy=1" alt="Preenchimentos">
                 </div>
                 <div class="service-info">
                     <h3>Preenchimentos Faciais com Ácido Hialurônico</h3>
                     <p>Procedimento estético realizado após avaliação profissional, com foco em cuidado, aparência e acompanhamento individual.</p>
-
-                    <a href="https://wa.me/5563999610812?text=Olá! Gostaria de saber mais sobre Preenchimentos Faciais e Harmonização Facial." class="btn" target="_blank">
-  Saiba mais
-</a>
+                </div>
+                <div class="service-btn">
+                    <a href="https://wa.me/5563999610812?text=Olá! Gostaria de saber mais sobre Preenchimentos Faciais e Harmonização Facial." class="btn" target="_blank">Saiba mais</a>
                 </div>
             </div>
             <!-- Service 4 -->
             <div class="service-card">
-                <div class="carousel">
-                    <img src="https://ricardoramosbancodeimagens.wordpress.com/wp-content/uploads/2026/02/bum-bum-1.webp?allow_lossy=1" class="carousel-slide active" alt="Harmonização Facial">
-                    <img src="https://ricardoramosbancodeimagens.wordpress.com/wp-content/uploads/2026/02/corporal-bum-bum-2.jpg.jpeg?allow_lossy=1" class="carousel-slide" alt="Harmonização Facial 2">
-                    <button class="carousel-btn prev"><i class="fas fa-chevron-left"></i></button>
-                    <button class="carousel-btn next"><i class="fas fa-chevron-right"></i></button>
+                <div class="service-icon">
+                    <img src="https://ricardoramosbancodeimagens.wordpress.com/wp-content/uploads/2026/02/corpo.png?allow_lossy=1" alt="Procedimentos Corporais">
                 </div>
                 <div class="service-info">
                     <h3>Procedimentos Corporais – Contorno e Proporção</h3>
                     <p>Procedimento estético realizado após avaliação profissional, com foco em cuidado, aparência e acompanhamento individual.</p>
-
-                  <a href="https://wa.me/5563999610812?text=Olá! Gostaria de saber mais sobre Preenchimentos Corporais (Glúteos e Região Íntima)." class="btn" target="_blank">
-  Saiba mais
-</a>
+                </div>
+                <div class="service-btn">
+                    <a href="https://wa.me/5563999610812?text=Olá! Gostaria de saber mais sobre Preenchimentos Corporais (Glúteos e Região Íntima)." class="btn" target="_blank">Saiba mais</a>
                 </div>
             </div>
             <!-- Service 5 -->
             <div class="service-card">
-                <div class="carousel">
-                    <img src="https://ricardoramosbancodeimagens.wordpress.com/wp-content/uploads/2026/02/skinbooster-1.jpg.jpeg?w=819&allow_lossy=1" class="carousel-slide active" alt="Endolifting">
-                    <img src="https://ricardoramosbancodeimagens.wordpress.com/wp-content/uploads/2026/02/skinbooster-2.jpg.jpeg?allow_lossy=1" class="carousel-slide" alt="Endolifting 2">
-                    <button class="carousel-btn prev"><i class="fas fa-chevron-left"></i></button>
-                    <button class="carousel-btn next"><i class="fas fa-chevron-right"></i></button>
+                <div class="service-icon">
+                    <img src="https://ricardoramosbancodeimagens.wordpress.com/wp-content/uploads/2026/02/img_7417.png?allow_lossy=1" alt="Skinbooster">
                 </div>
                 <div class="service-info">
                     <h3>Skinbooster – Hidratação Profunda da Pele</h3>
                     <p>Procedimento estético realizado após avaliação profissional, com foco em cuidado, aparência e acompanhamento individual.</p>
-
-                  <a href="https://wa.me/5563999610812?text=Olá! Gostaria de saber mais sobre Skinbooster." class="btn" target="_blank">
-  Saiba mais
-</a>
+                </div>
+                <div class="service-btn">
+                    <a href="https://wa.me/5563999610812?text=Olá! Gostaria de saber mais sobre Skinbooster." class="btn" target="_blank">Saiba mais</a>
                 </div>
             </div>
-                      <!-- Service 6 -->
+            <!-- Service 6 -->
             <div class="service-card">
-                <div class="carousel">
-                    <img src="https://ricardoramosbancodeimagens.wordpress.com/wp-content/uploads/2026/02/new-skin-2.jpg.jpeg?w=819&allow_lossy=1" class="carousel-slide active" alt="Endolifting">
-                    <img src="https://ricardoramosbancodeimagens.wordpress.com/wp-content/uploads/2026/02/new-skin-1.jpg.jpeg?w=819&allow_lossy=1" class="carousel-slide" alt="Endolifting 2">
-                    <button class="carousel-btn prev"><i class="fas fa-chevron-left"></i></button>
-                    <button class="carousel-btn next"><i class="fas fa-chevron-right"></i></button>
+                <div class="service-icon">
+                    <img src="https://ricardoramosbancodeimagens.wordpress.com/wp-content/uploads/2026/02/img_7418.png?allow_lossy=1" alt="New Skin">
                 </div>
                 <div class="service-info">
                     <h3>Protocolo New Skin – Renovação e Qualidade da Pele</h3>
                     <p>Procedimento estético realizado após avaliação profissional, com foco em cuidado, aparência e acompanhamento individual.</p>
-
-                  <a href="https://wa.me/5563999610812?text=Olá! Gostaria de saber mais sobre o Protocolo New Skin." class="btn" target="_blank">
-  Saiba mais
-</a>
+                </div>
+                <div class="service-btn">
+                    <a href="https://wa.me/5563999610812?text=Olá! Gostaria de saber mais sobre o Protocolo New Skin." class="btn" target="_blank">Saiba mais</a>
                 </div>
             </div>
-                      <!-- Service 7 -->
+            <!-- Service 7 -->
             <div class="service-card">
-                <div class="carousel">
-                            <img src="https://ricardoramosbancodeimagens.wordpress.com/wp-content/uploads/2026/02/endolifting-1.png?w=768&allow_lossy=1" class="carousel-slide active" alt="Endolifting">
-                    <img src="https://ricardoramosbancodeimagens.wordpress.com/wp-content/uploads/2026/02/whatsapp-image-2026-02-05-at-14.03.06.jpeg?w=1024&allow_lossy=1" class="carousel-slide" alt="Endolifting 2">
-                    <button class="carousel-btn prev"><i class="fas fa-chevron-left"></i></button>
-                    <button class="carousel-btn next"><i class="fas fa-chevron-right"></i></button>
+                <div class="service-icon">
+                    <img src="https://ricardoramosbancodeimagens.wordpress.com/wp-content/uploads/2026/02/img_7419.png?allow_lossy=1" alt="Endolifting">
                 </div>
                 <div class="service-info">
                     <h3>Endolifting Facial e Corporal – Contorno e Firmeza</h3>
                     <p>Procedimento estético realizado após avaliação profissional, com foco em cuidado, aparência e acompanhamento individual.</p>
-
-                  <a href="https://wa.me/5563999610812?text=Olá! Gostaria de saber mais sobre Endolifting Facial e Corporal." class="btn" target="_blank">
-  Saiba mais
-</a>
+                </div>
+                <div class="service-btn">
+                    <a href="https://wa.me/5563999610812?text=Olá! Gostaria de saber mais sobre Endolifting Facial e Corporal." class="btn" target="_blank">Saiba mais</a>
                 </div>
             </div>
-                      <!-- Service 8 -->
+            <!-- Service 8 -->
             <div class="service-card">
-                <div class="carousel">
-                    <img src="https://ricardoramosbancodeimagens.wordpress.com/wp-content/uploads/2026/02/img_5918.jpg.jpeg?allow_lossy=1" class="carousel-slide active" alt="Endolifting">
-                    <button class="carousel-btn prev"><i class="fas fa-chevron-left"></i></button>
-                    <button class="carousel-btn next"><i class="fas fa-chevron-right"></i></button>
+                <div class="service-icon">
+                    <img src="https://ricardoramosbancodeimagens.wordpress.com/wp-content/uploads/2026/02/img_7420.png?allow_lossy=1" alt="Bioestimuladores">
                 </div>
                 <div class="service-info">
                     <h3>Bioestimuladores de Colágeno – Firmeza e Sustentação</h3>
                     <p>Procedimento estético realizado após avaliação profissional, com foco em cuidado, aparência e acompanhamento individual.</p>
-
-                    <a href="https://wa.me/5563999610812?text=Olá! Gostaria de saber mais sobre Bioestimuladores de Colágeno." class="btn" target="_blank">
-  Saiba mais
-</a>
+                </div>
+                <div class="service-btn">
+                    <a href="https://wa.me/5563999610812?text=Olá! Gostaria de saber mais sobre Bioestimuladores de Colágeno." class="btn" target="_blank">Saiba mais</a>
                 </div>
             </div>
         </div>
     </section>
+
     <!-- Contato -->
     <section id="contato" class="section contact-section">
         <h2 class="section-title">Agende Sua Avaliação</h2>
         <div class="contact-container">
-            <div class="contact-image">
-                <img src="https://ricardoramosbancodeimagens.wordpress.com/wp-content/uploads/2026/02/agende-sua-avaliacao.jpg.jpeg?w=683&allow_lossy=1" alt="Agendamento">
-            </div>
+ <div class="contact-image">
+    <img src="https://ricardoramosbancodeimagens.wordpress.com/wp-content/uploads/2026/02/design-sem-nome-19.png" alt="Agendamento PC">
+</div>
+<div class="contact-image-mobile">
+    <img src="https://ricardoramosbancodeimagens.wordpress.com/wp-content/uploads/2026/02/design-sem-nome-19.png" alt="Agendamento Mobile">
+</div>
             <form class="contact-form" id="contactForm">
                 <div class="form-group">
                     <label for="name">Nome Completo</label>
@@ -683,59 +829,95 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <label for="message">Mensagem</label>
                     <textarea id="message" required placeholder="Digite sua mensagem" rows="4"></textarea>
                 </div>
-                <button type="submit" class="btn" style="width: 100%">Agendar</button>
+                <button type="submit">Agendar Avaliação</button>
             </form>
         </div>
     </section>
- 
-  <!-- Clientes -->
-<section id="clientes" class="section" style="background:#f9f9f9">
-    <h2 class="section-title">O que nossos clientes dizem</h2>
-    <!-- Vídeo YouTube -->
-    <div style="max-width:800px;margin:0 auto 3rem;border-radius:20px;overflow:hidden;box-shadow:0 10px 30px rgba(0,0,0,.15)">
-<iframe
-    width="100%"
-    height="450"
-    src="https://www.youtube.com/embed/XhWQwCZk6c8"
-    title="Depoimento de Cliente"
-    frameborder="0"
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-    allowfullscreen>
-</iframe>
-    </div>
-    <!-- Carrossel de Depoimentos -->
-    <div class="testimonials-carousel">
-        <div class="testimonial active">
-            <p>“O Ricardo é um excelente profissional. Venho realizando procedimentos faciais com ele há dois anos e só elogios. Que continue assim cuidadoso, criterioso, atualizado e prestativo. Faz uso de produtos de alta qualidade reconhecidos no mercado. Recomendo!”</p>
-            <h4>Paula Sousa</h4>
+
+    <!-- Clientes -->
+    <section id="clientes" class="section testimonials-section">
+        <h2 class="section-title">O que nossos clientes dizem</h2>
+        <div class="testimonials-content">
+            <div class="testimonials-carousel">
+                <div class="testimonial active">
+                    <div class="testimonial-header">
+                        <div class="testimonial-profile">
+                            <img src="https://ricardoramosbancodeimagens.wordpress.com/wp-content/uploads/2026/02/design-sem-nome-16.png?allow_lossy=1" alt="Usuário">
+                        </div>
+                        <div class="testimonial-name">Paula Sousa</div>
+                    </div>
+                    <div class="testimonial-stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p>“O Ricardo é um excelente profissional. Venho realizando procedimentos faciais com ele há dois anos e só elogios. Que continue assim cuidadoso, criterioso, atualizado e prestativo. Faz uso de produtos de alta qualidade reconhecidos no mercado. Recomendo!”</p>
+                </div>
+                <div class="testimonial">
+                    <div class="testimonial-header">
+                        <div class="testimonial-profile">
+                            <img src="https://ricardoramosbancodeimagens.wordpress.com/wp-content/uploads/2026/02/design-sem-nome-16.png?allow_lossy=1" alt="Usuário">
+                        </div>
+                        <div class="testimonial-name">Mikaelle Carvalho</div>
+                    </div>
+                    <div class="testimonial-stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p>“Fui atendida na Clínica Dr. Ricardo Estética Avançada e tive uma experiência excelente. Desde a recepção, o atendimento foi atencioso, profissional e humanizado. O ambiente da clínica é moderno, organizado e transmite muita confiança e conforto.Amo essa clínica!”</p>
+                </div>
+                <div class="testimonial">
+                    <div class="testimonial-header">
+                        <div class="testimonial-profile">
+                            <img src="https://ricardoramosbancodeimagens.wordpress.com/wp-content/uploads/2026/02/design-sem-nome-16.png?allow_lossy=1" alt="Usuário">
+                        </div>
+                        <div class="testimonial-name">Thyago Borges</div>
+                    </div>
+                    <div class="testimonial-stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p>“A clínica é simplesmente impecável! O ambiente é lindo, super acolhedor, tudo muito limpo, organizado e com um perfume delicioso no ar. Dá vontade de ficar lá só curtindo o clima. O atendimento é extremamente profissional, a equipe é atenciosa, cuidadosa e faz questão de explicar cada detalhe dos procedimentos. Dá pra sentir que tudo é feito com muita responsabilidade e carinho. Recomendo de olhos fechados!”</p>
+                </div>
+                <div class="testimonial">
+                    <div class="testimonial-header">
+                        <div class="testimonial-profile">
+                            <img src="https://ricardoramosbancodeimagens.wordpress.com/wp-content/uploads/2026/02/design-sem-nome-16.png?allow_lossy=1" alt="Usuário">
+                        </div>
+                        <div class="testimonial-name">C. Ramos</div>
+                    </div>
+                    <div class="testimonial-stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p>“Ao Dr. Ricardo Ramos somente gratidão pelo atendimento de excelência em seus procedimentos realizados na clínica! Estou amando meus resultados”</p>
+                </div>
+                <div class="testimonial">
+                    <div class="testimonial-header">
+                        <div class="testimonial-profile">
+                            <img src="https://ricardoramosbancodeimagens.wordpress.com/wp-content/uploads/2026/02/design-sem-nome-16.png?allow_lossy=1" alt="Usuário">
+                        </div>
+                        <div class="testimonial-name">Vitória Fiametti</div>
+                    </div>
+                    <div class="testimonial-stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p>“Ambiente super agradável, atendimento excelente e o Dr Ricardo muito atencioso e perfeccionista nos seus procedimentos”</p>
+                </div>
+                <div class="testimonial">
+                    <div class="testimonial-header">
+                        <div class="testimonial-profile">
+                            <img src="https://ricardoramosbancodeimagens.wordpress.com/wp-content/uploads/2026/02/design-sem-nome-16.png?allow_lossy=1" alt="Usuário">
+                        </div>
+                        <div class="testimonial-name">Lucilene Farias</div>
+                    </div>
+                    <div class="testimonial-stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p>“O atendimento desde a recepção a consulta com o dr Ricardo, foi excelente. Um profissional muito competente e dedicado ao que faz. Estou muito satisfeita.”</p>
+                </div>
+            </div>
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/XhWQwCZk6c8" title="Depoimento de Cliente" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
         </div>
-        <div class="testimonial">
-            <p>“Fui atendida na Clínica Dr. Ricardo Estética Avançada e tive uma experiência excelente. Desde a recepção, o atendimento foi atencioso, profissional e humanizado. O ambiente da clínica é moderno, organizado e transmite muita confiança e conforto.Amo essa clínica!”</p>
-            <h4>Mikaelle Carvalho</h4>
-        </div>
-        <div class="testimonial">
-            <p>“A clínica é simplesmente impecável! O ambiente é lindo, super acolhedor, tudo muito limpo, organizado e com um perfume delicioso no ar. Dá vontade de ficar lá só curtindo o clima. O atendimento é extremamente profissional, a equipe é atenciosa, cuidadosa e faz questão de explicar cada detalhe dos procedimentos. Dá pra sentir que tudo é feito com muita responsabilidade e carinho. Recomendo de olhos fechados!”</p>
-            <h4>Thyago Borges</h4>
-        </div>
-     
-        <div class="testimonial">
-            <p>“Ao Dr. Ricardo Ramos somente gratidão pelo atendimento de excelência em seus procedimentos realizados na clínica! Estou amando meus resultados”</p>
-            <h4>C. Ramos</h4>
-        </div>
-     
-        <div class="testimonial">
-            <p>“Ambiente super agradável, atendimento excelente e o Dr Ricardo muito atencioso e perfeccionista nos seus procedimentos”</p>
-            <h4>Vitória Fiametti</h4>
-        </div>
-     
-        <div class="testimonial">
-            <p>“O atendimento desde a recepção a consulta com o dr Ricardo, foi excelente. Um profissional muito competente e dedicado ao que faz. Estou muito satisfeita.”</p>
-            <h4>Lucilene Farias</h4>
-        </div>
-        <button class="carousel-btn prev"><i class="fas fa-chevron-left"></i></button>
-        <button class="carousel-btn next"><i class="fas fa-chevron-right"></i></button>
-    </div>
-</section>
+    </section>
+
     <!-- FAQ -->
     <section id="duvidas" class="section faq-section">
         <h2 class="section-title">Dúvidas Frequentes</h2>
@@ -746,18 +928,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <i class="fas fa-chevron-down accordion-icon"></i>
                 </div>
                 <div class="accordion-body">
-                    <p>A avaliação é realizada de forma individual, onde são analisadas as necessidades,
-expectativas e características de cada paciente para definição da melhor abordagem estética.</p>
+                    <p>A avaliação é realizada de forma individual, onde são analisadas as necessidades, expectativas e características de cada paciente para definição da melhor abordagem estética.</p>
                 </div>
             </div>
             <div class="accordion-item">
                 <div class="accordion-header">
-                    <span> O atendimento é personalizado?</span>
+                    <span>O atendimento é personalizado?</span>
                     <i class="fas fa-chevron-down accordion-icon"></i>
                 </div>
                 <div class="accordion-body">
-                    <p>Sim. Cada atendimento é planejado de forma personalizada, respeitando as
-características individuais, com foco em cuidado, segurança e acompanhamento.</p>
+                    <p>Sim. Cada atendimento é planejado de forma personalizada, respeitando as características individuais, com foco em cuidado, segurança e acompanhamento.</p>
                 </div>
             </div>
             <div class="accordion-item">
@@ -766,124 +946,88 @@ características individuais, com foco em cuidado, segurança e acompanhamento.<
                     <i class="fas fa-chevron-down accordion-icon"></i>
                 </div>
                 <div class="accordion-body">
-                    <p>O agendamento pode ser feito diretamente pelos canais de contato disponíveis,
-onde a equipe orienta sobre horários e disponibilidade.</p>
+                    <p>O agendamento pode ser feito diretamente pelos canais de contato disponíveis, onde a equipe orienta sobre horários e disponibilidade.</p>
                 </div>
             </div>
         </div>
     </section>
+
     <!-- Sobre -->
     <section id="sobre" class="section">
         <div class="about-container">
-            <div class="about-image">
-                <img src="https://ricardoramosbancodeimagens.wordpress.com/wp-content/uploads/2026/02/biografia-1.jpg.jpeg?w=683&allow_lossy=1" alt="Ricardo Ramos Profissional">
-            </div>
+<div class="about-image">
+    <img src="https://ricardoramosbancodeimagens.wordpress.com/wp-content/uploads/2026/02/design-sem-nome-17.png" alt="Ricardo Ramos Profissional">
+</div>
             <div class="about-text">
                 <h3>Ricardo Ramos</h3>
                 <p>Ricardo Ramos é especialista em estética avançada, com 11 anos de atuação na área estética, oferecendo procedimentos estéticos faciais e corporais em Palmas, Tocantins, sempre com foco em segurança, individualização e naturalidade.</p>
-                <button id="readMoreBtn" class="btn">Leia mais</button>
-                <div id="moreAbout" style="display:none;">
                 <p>Com uma abordagem ética e criteriosa, Ricardo acredita que a estética deve respeitar a anatomia, a identidade e a qualidade da pele de cada paciente. Por isso, todos os procedimentos estéticos são cuidadosamente planejados a partir de uma avaliação detalhada, considerando as necessidades e os objetivos individuais.</p>
-                <p>Na Ricardo Ramos Estética Avançada, clínica especializada em estética avançada em Palmas – TO, cada atendimento reflete o compromisso com a excelência, o cuidado individualizado e a valorização da autoestima, proporcionando confiança e bem-estar aos pacientes.
-</p>
-                  
-                  
+                <p>Na Ricardo Ramos Estética Avançada, clínica especializada em estética avançada em Palmas – TO, cada atendimento reflete o compromisso com a excelência, o cuidado individualizado e a valorização da autoestima, proporcionando confiança e bem-estar aos pacientes.</p>
+                <div style="margin-top:1.5rem; font-size:0.9rem; color:#666">
+                    <strong>Responsável técnico:</strong> Ricardo Ramos<br>
+                    <strong>Clínica:</strong> Ricardo Ramos Estética Avançada<br>
+                    <strong>CNPJ:</strong> 61.444.433/0001-20<br>
+                    <strong>Endereço:</strong> Avenida Joaquim Teotônio Segurado, quadra 101 Sul, lote 03, conjunto 1, Condomíniho Execultive Carpe Diem, Plano Diretor Sul, sala 407. CEP: 77015-002
                 </div>
-              <div style="margin-top:20px;font-size:0.9rem;color:#666">
-<strong>Responsável técnico:</strong> Ricardo Ramos<br>
-<strong>Clínica:</strong> Ricardo Ramos Estética Avançada<br>
-<strong>CNPJ:</strong> 61.444.433/0001-20<br>
-<strong>Endereço:</strong> Avenida Joaquim Teotônio Segurado, quadra 101 Sul, lote 03, conjunto 1, Condomíniho Execultive Carpe Diem, Plano Diretor Sul, sala 407. 
-CEP: 77015-002
-</div>
-
             </div>
         </div>
     </section>
- <!-- Localização -->
-<section class="section">
-    <h2 class="section-title">Conheça Nosso Espaço</h2>
-    <div class="location-content">
-        <div class="location-info">
-            <h3>Clínica Ricardo Ramos</h3>
-            <p class="address">
-                <i class="fas fa-map-marker-alt"></i>
-                Avenida Joaquim Teotônio Segurado, quadra 101 Sul, lote 03, conjunto 1, Condomínio Executive Carpe Diem, Plano Diretor Sul, sala 407.
-            </p>
-            <div class="carousel" style="border-radius: 10px; margin-bottom: 20px;">
-                <img src="https://ricardoramosbancodeimagens.wordpress.com/wp-content/uploads/2026/02/whatsapp-image-2026-02-05-at-15.46.38-1-1.jpeg?w=768&allow_lossy=1" class="carousel-slide active" alt="Espaço 1">
-                <img src="https://ricardoramosbancodeimagens.wordpress.com/wp-content/uploads/2026/02/whatsapp-image-2026-02-05-at-15.47.12-1.jpeg?w=768&allow_lossy=1" class="carousel-slide" alt="Espaço 2">
-                <button class="carousel-btn prev"><i class="fas fa-chevron-left"></i></button>
-                <button class="carousel-btn next"><i class="fas fa-chevron-right"></i></button>
+
+    <!-- Localização -->
+    <section id="local" class="section location-section">
+        <h2 class="section-title">Conheça Nosso Espaço</h2>
+        <div class="location-content">
+            <div class="location-info">
+                <h3 style="text-align: center; color: var(--primary-color); margin-bottom: 1.5rem;">Clínica Ricardo Ramos</h3>
+                <div class="location-details">
+                    <div class="location-detail">
+                        <img src="https://ricardoramosbancodeimagens.wordpress.com/wp-content/uploads/2026/02/1.png?allow_lossy=1" alt="Localização" class="location-icon">
+                        <p>Avenida Joaquim Teotônio Segurado, quadra 101 Sul, lote 03, conjunto 1, Condomínio Executive Carpe Diem, Plano Diretor Sul, sala 407.</p>
+                    </div>
+                    <div class="location-detail">
+                        <img src="https://ricardoramosbancodeimagens.wordpress.com/wp-content/uploads/2026/02/2.png?allow_lossy=1" alt="Telefone" class="location-icon">
+                        <p>(63) 99961-0812</p>
+                    </div>
+                    <div class="location-detail">
+                        <img src="https://ricardoramosbancodeimagens.wordpress.com/wp-content/uploads/2026/02/3.png?allow_lossy=1" alt="Horário" class="location-icon">
+                        <p>Segunda a Sexta: 8h às 18h</p>
+                    </div>
+                </div>
+                <div class="location-carousel">
+                    <img src="https://ricardoramosbancodeimagens.wordpress.com/wp-content/uploads/2026/02/whatsapp-image-2026-02-05-at-15.46.38-1-1-edited.jpeg?allow_lossy=1" class="carousel-slide active" alt="Espaço 1">
+                    <img src="https://ricardoramosbancodeimagens.wordpress.com/wp-content/uploads/2026/02/whatsapp-image-2026-02-05-at-15.47.12-1.jpeg?w=768&allow_lossy=1" class="carousel-slide" alt="Espaço 2">
+                </div>
+                <a href="https://maps.app.goo.gl/1aHTMr9ztfsWpU1a6" target="_blank" class="btn location-btn">Abrir no Google Maps</a>
             </div>
-<a
-  href="https://maps.app.goo.gl/1aHTMr9ztfsWpU1a6"
-  target="_blank"
-  class="btn"
->
-  Abrir no Google Maps
-</a>
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3926.8733936510584!2d-48.3342878!3d-10.190935699999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9324cb000c1feaf3%3A0xc7f2e70c75dfa63e!2sDr.%20Ricardo%20Ramos%20-%20Est%C3%A9tica%20Avan%C3%A7ada!5e0!3m2!1spt-BR!2sbr!4v1768869266818!5m2!1spt-BR!2sbr" width="100%" height="100%" style="border:0;" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
         </div>
-        <div class="map-container">
-            <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3926.8733936510584!2d-48.3342878!3d-10.190935699999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9324cb000c1feaf3%3A0xc7f2e70c75dfa63e!2sDr.%20Ricardo%20Ramos%20-%20Est%C3%A9tica%20Avan%C3%A7ada!5e0!3m2!1spt-BR!2sbr!4v1768869266818!5m2!1spt-BR!2sbr"
-                width="100%"
-                height="100%"
-                style="border:0;"
-                allowfullscreen
-                loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade">
-            </iframe>
+    </section>
+
+    <!-- Instagram -->
+    <section class="section instagram-section">
+        <h2 class="section-title">Acompanhe no Instagram</h2>
+        <p class="instagram-subtitle">Acompanhe conteúdos, novidades e bastidores do nosso atendimento em estética avançada em Palmas – TO.</p>
+        <div class="instagram-feed" style="display: flex; justify-content: center;">
+            <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/drricardoramosbio/" data-instgrm-version="14" style="background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"></blockquote>
         </div>
-    </div>
-</section>
- 
-  <!-- Instagram -->
-<section class="section instagram-section">
-    <h2 class="section-title">Acompanhe no Instagram</h2>
-    <p class="instagram-subtitle">
-       Acompanhe conteúdos, novidades e bastidores do nosso atendimento em estética avançada em Palmas – TO.
-    </p>
-    <div class="instagram-preview">
-        <a href="https://www.instagram.com/drricardoramosbio/" target="_blank">
-            <img src="https://convidatasshop.wordpress.com/wp-content/uploads/2026/01/whatsapp-image-2026-01-22-at-09.20.30.jpeg?w=563" alt="Instagram post 1">
-        </a>
-        <a href="https://www.instagram.com/drricardoramosbio/" target="_blank">
-            <img src="https://convidatasshop.wordpress.com/wp-content/uploads/2026/01/whatsapp-image-2026-01-22-at-09.20.31.jpeg?w=624" alt="Instagram post 2">
-        </a>
-        <a href="https://www.instagram.com/drricardoramosbio/" target="_blank">
-            <img src="https://convidatasshop.wordpress.com/wp-content/uploads/2026/01/whatsapp-image-2026-01-22-at-09.20.30-1-1.jpeg?w=561" alt="Instagram post 3">
-        </a>
-    </div>
-    <a
-        href="https://www.instagram.com/drricardoramosbio/"
-        target="_blank"
-        class="btn instagram-btn"
-    >
-        Seguir no Instagram
-    </a>
-</section>
-  
-  <!-- Política de Privacidade -->
-<section class="section" id="privacidade" style="background:#f5f5f5">
-  <h2 class="section-title">Política de Privacidade</h2>
-  <div style="max-width:900px;margin:0 auto;color:#555;font-size:0.95rem;line-height:1.7">
+        <script async src="//www.instagram.com/embed.js"></script>
+        <a href="https://www.instagram.com/drricardoramosbio/" target="_blank" class="btn instagram-btn">Seguir no Instagram</a>
+    </section>
 
-<p>Levamos sua privacidade a sério. Os dados coletados neste site (nome, telefone e mensagem) são utilizados exclusivamente para contato e agendamento de avaliação.</p>
+    <!-- Política de Privacidade -->
+    <section class="section" id="privacidade">
+        <h2 class="section-title">Política de Privacidade</h2>
+        <div class="content">
+            <p>Levamos sua privacidade a sério. Os dados coletados neste site (nome, telefone e mensagem) são utilizados exclusivamente para contato e agendamento de avaliação.</p>
+            <p>Não compartilhamos, vendemos ou divulgamos suas informações a terceiros. Seus dados são armazenados de forma segura e utilizados apenas para comunicação direta com a clínica.</p>
+            <p>Este site pode utilizar cookies e ferramentas de rastreamento para melhorar a experiência do usuário e medir desempenho de campanhas publicitárias.</p>
+            <p>Ao utilizar este site, você concorda com a coleta e uso das informações conforme descrito nesta política, em conformidade com a Lei Geral de Proteção de Dados (LGPD).</p>
+            <p>Para dúvidas sobre privacidade, entre em contato pelo WhatsApp disponível neste site.</p>
+        </div>
+    </section>
 
-<p>Não compartilhamos, vendemos ou divulgamos suas informações a terceiros. Seus dados são armazenados de forma segura e utilizados apenas para comunicação direta com a clínica.</p>
-
-<p>Este site pode utilizar cookies e ferramentas de rastreamento para melhorar a experiência do usuário e medir desempenho de campanhas publicitárias.</p>
-
-<p>Ao utilizar este site, você concorda com a coleta e uso das informações conforme descrito nesta política, em conformidade com a Lei Geral de Proteção de Dados (LGPD).</p>
-
-<p>Para dúvidas sobre privacidade, entre em contato pelo WhatsApp disponível neste site.</p>
-
-  </div>
-</section>
-
-  
-  
     <!-- Footer -->
     <footer>
         <div class="footer-logo">
@@ -893,199 +1037,120 @@ CEP: 77015-002
             <a href="https://www.instagram.com/drricardoramosbio/"><i class="fab fa-instagram"></i></a>
             <a href="https://wa.me/5563999610812"><i class="fab fa-whatsapp"></i></a>
         </div>
-      <p style="font-size:0.8rem;color:#aaa;margin-top:15px;max-width:800px;margin-left:auto;margin-right:auto">
-Os procedimentos estéticos possuem indicação individualizada. Resultados variam conforme cada paciente.
-Avaliação profissional recomendada. Este site possui caráter informativo e não substitui consulta presencial.
-</p>
-
+        <p style="font-size:0.8rem;color:#aaa;margin-top:15px;max-width:800px;margin-left:auto;margin-right:auto">
+            Os procedimentos estéticos possuem indicação individualizada. Resultados variam conforme cada paciente.
+            Avaliação profissional recomendada. Este site possui caráter informativo e não substitui consulta presencial.
+        </p>
         <p class="copyright">© 2026 Ricardo Ramos Estética Avançada. Todos os direitos reservados.</p>
-      
     </footer>
-<!-- WhatsApp Float -->
-<a
-    href="https://wa.me/5563999610812"
-    class="whatsapp-float"
-    target="_blank"
->
-    <i class="fab fa-whatsapp"></i>
-</a>
-<script>
-    /* ============================
-       Mobile Menu Toggle
-    ============================ */
-    const menuToggle = document.querySelector('.menu-toggle');
-    const navLinks = document.querySelector('.nav-links');
-    menuToggle?.addEventListener('click', () => {
-        navLinks.classList.toggle('active');
-    });
-    document.querySelectorAll('.nav-links a').forEach(link => {
-        link.addEventListener('click', () => {
-            navLinks.classList.remove('active');
+
+    <!-- WhatsApp Float -->
+    <a href="https://wa.me/5563999610812" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- COOKIE BANNER -->
+    <div id="cookieBanner" style="position:fixed;bottom:0;left:0;width:100%;background:#000;color:#fff;padding:15px;text-align:center;font-size:0.9rem;z-index:9999">
+        Este site utiliza cookies para melhorar sua experiência, medir desempenho e exibir anúncios relevantes.
+        <button onclick="acceptCookies()" style="margin-left:10px;padding:8px 15px;border:none;background:#A27658;color:white;border-radius:5px;cursor:pointer">
+            Aceitar
+        </button>
+    </div>
+
+    <script>
+        let cookiesAccepted = false;
+        document.addEventListener('DOMContentLoaded', function () {
+            const banner = document.getElementById('cookieBanner');
+            if (cookiesAccepted) banner.style.display = 'none';
         });
-    });
-    /* ============================
-       Carrossel de Imagens (Serviços / Local)
-    ============================ */
-    class Carousel {
-        constructor(element) {
-            this.element = element;
-            this.slides = element.querySelectorAll('.carousel-slide');
-            this.prevBtn = element.querySelector('.prev');
-            this.nextBtn = element.querySelector('.next');
-            this.currentIndex = 0;
-            if (this.slides.length > 0) {
-                this.slides[0].classList.add('active');
-                this.prevBtn?.addEventListener('click', () => this.prev());
-                this.nextBtn?.addEventListener('click', () => this.next());
-                setInterval(() => this.next(), 5000);
+        window.acceptCookies = function () {
+            document.getElementById('cookieBanner').style.display = 'none';
+            cookiesAccepted = true;
+        };
+
+        // Mobile Menu Toggle
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
+        menuToggle?.addEventListener('click', () => navLinks.classList.toggle('active'));
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => navLinks.classList.remove('active'));
+        });
+
+        // Carousel para localização
+        class Carousel {
+            constructor(element) {
+                this.element = element;
+                this.slides = element.querySelectorAll('.carousel-slide');
+                this.currentIndex = 0;
+                if (this.slides.length > 0) {
+                    this.slides[0].classList.add('active');
+                    setInterval(() => this.next(), 4000);
+                }
             }
+            show(index) { this.slides.forEach(s => s.classList.remove('active')); this.slides[index].classList.add('active'); }
+            next() { this.currentIndex = (this.currentIndex + 1) % this.slides.length; this.show(this.currentIndex); }
         }
-        show(index) {
-            this.slides.forEach(s => s.classList.remove('active'));
-            this.slides[index].classList.add('active');
-        }
-        next() {
-            this.currentIndex = (this.currentIndex + 1) % this.slides.length;
-            this.show(this.currentIndex);
-        }
-        prev() {
-            this.currentIndex = (this.currentIndex - 1 + this.slides.length) % this.slides.length;
-            this.show(this.currentIndex);
-        }
-    }
-    document.querySelectorAll('.carousel').forEach(el => new Carousel(el));
-    /* ============================
-       Accordion (FAQ)
-    ============================ */
-    document.querySelectorAll('.accordion-item').forEach(item => {
-        const header = item.querySelector('.accordion-header');
-        header.addEventListener('click', () => {
-            const isActive = item.classList.contains('active');
-            document.querySelectorAll('.accordion-item').forEach(i => {
-                i.classList.remove('active');
-                i.querySelector('.accordion-body').style.maxHeight = null;
+        document.querySelectorAll('.location-carousel').forEach(el => new Carousel(el));
+
+        // Accordion FAQ
+        document.querySelectorAll('.accordion-item').forEach(item => {
+            const header = item.querySelector('.accordion-header');
+            header.addEventListener('click', () => {
+                const isActive = item.classList.contains('active');
+                document.querySelectorAll('.accordion-item').forEach(i => {
+                    i.classList.remove('active');
+                    i.querySelector('.accordion-body').style.maxHeight = null;
+                });
+                if (!isActive) {
+                    item.classList.add('active');
+                    const body = item.querySelector('.accordion-body');
+                    body.style.maxHeight = body.scrollHeight + 'px';
+                }
             });
-            if (!isActive) {
-                item.classList.add('active');
-                const body = item.querySelector('.accordion-body');
-                body.style.maxHeight = body.scrollHeight + 'px';
-            }
         });
-    });
-    /* ============================
-       Leia Mais (Sobre)
-    ============================ */
-    document.getElementById('readMoreBtn')?.addEventListener('click', () => {
-        document.getElementById('moreAbout').style.display = 'block';
-        document.getElementById('readMoreBtn').style.display = 'none';
-    });
- /* ============================
-   Formulário → WhatsApp IMEDIATO
-   + Registro em background
-============================ */
-const scriptURL = 'https://script.google.com/macros/s/AKfycbyjfENhBraUpDHXYYX7ugfsAYdblikNWLN5J0sFRLY5SvJVwj19Y2qgSLNoRVg-313k/exec';
-const form = document.getElementById('contactForm');
-const submitBtn = form?.querySelector('button[type="submit"]');
-form?.addEventListener('submit', (e) => {
-    e.preventDefault();
-    // trava botão para evitar múltiplos cliques
-    submitBtn.disabled = true;
-    submitBtn.innerText = 'Enviando...';
-    const name = document.getElementById('name').value.trim();
-    const phone = document.getElementById('phone').value.trim();
-    const messageText = document.getElementById('message').value.trim();
-    if (!name || !phone || !messageText) {
-        alert('Por favor, preencha todos os campos!');
-        submitBtn.disabled = false;
-        submitBtn.innerText = 'Agendar Avaliação';
-        return;
-    }
 
+        // Formulário
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbyjfENhBraUpDHXYYX7ugfsAYdblikNWLN5J0sFRLY5SvJVwj19Y2qgSLNoRVg-313k/exec';
+        const form = document.getElementById('contactForm');
+        const submitBtn = form?.querySelector('button[type="submit"]');
+        form?.addEventListener('submit', (e) => {
+            e.preventDefault();
+            submitBtn.disabled = true;
+            submitBtn.innerText = 'Enviando...';
+            const name = document.getElementById('name').value.trim();
+            const phone = document.getElementById('phone').value.trim();
+            const messageText = document.getElementById('message').value.trim();
+            if (!name || !phone || !messageText) {
+                alert('Por favor, preencha todos os campos!');
+                submitBtn.disabled = false;
+                submitBtn.innerText = 'Agendar Avaliação';
+                return;
+            }
+            const waMessage = `Olá! Meu nome é *${name}*. ${messageText}`;
+            window.open(`https://wa.me/5563999610812?text=${encodeURIComponent(waMessage)}`, '_blank');
+            fetch(scriptURL, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                body: new URLSearchParams({ name, phone, message: messageText })
+            }).catch(err => console.error('Erro ao registrar lead:', err));
+            form.reset();
+            setTimeout(() => {
+                submitBtn.disabled = false;
+                submitBtn.innerText = 'Agendar Avaliação';
+            }, 3000);
+        });
 
-    /* ==========
-       WhatsApp IMEDIATO
-    ========== */
-    const waMessage = `Olá! Meu nome é *${name}*. ${messageText}`;
-    window.open(
-        `https://wa.me/5563999610812?text=${encodeURIComponent(waMessage)}`,
-        '_blank'
-    );
-    /* ==========
-       Envio para planilha (sem esperar)
-    ========== */
-    fetch(scriptURL, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: new URLSearchParams({
-            name: name,
-            phone: phone,
-            message: messageText
-        })
-    })
-    .then(() => {
-        console.log('Lead registrado com sucesso');
-    })
-    .catch(err => {
-        console.error('Erro ao registrar lead:', err);
-    });
-    /* ==========
-       Reset visual
-    ========== */
-    form.reset();
-    setTimeout(() => {
-        submitBtn.disabled = false;
-        submitBtn.innerText = 'Agendar Avaliação';
-    }, 3000);
-});
-    /* ============================
-       Carrossel de Depoimentos (Clientes)
-    ============================ */
-    const testimonials = document.querySelectorAll('#clientes .testimonial');
-    let testimonialIndex = 0;
-    function showTestimonial(index) {
-        testimonials.forEach(t => t.classList.remove('active'));
-        testimonials[index].classList.add('active');
-    }
-    document.querySelector('#clientes .next')?.addEventListener('click', () => {
-        testimonialIndex = (testimonialIndex + 1) % testimonials.length;
-        showTestimonial(testimonialIndex);
-    });
-    document.querySelector('#clientes .prev')?.addEventListener('click', () => {
-        testimonialIndex =
-            (testimonialIndex - 1 + testimonials.length) % testimonials.length;
-        showTestimonial(testimonialIndex);
-    });
-    setInterval(() => {
-        testimonialIndex = (testimonialIndex + 1) % testimonials.length;
-        showTestimonial(testimonialIndex);
-    }, 6000);
+        // Depoimentos automáticos
+        const testimonials = document.querySelectorAll('.testimonial');
+        let testimonialIndex = 0;
+        function showTestimonial(index) {
+            testimonials.forEach(t => t.classList.remove('active'));
+            testimonials[index].classList.add('active');
+        }
+        setInterval(() => {
+            testimonialIndex = (testimonialIndex + 1) % testimonials.length;
+            showTestimonial(testimonialIndex);
+        }, 5000);
     </script>
-  <!-- COOKIE BANNER -->
-<div id="cookieBanner" style="position:fixed;bottom:0;left:0;width:100%;background:#000;color:#fff;padding:15px;text-align:center;font-size:0.9rem;z-index:9999">
-Este site utiliza cookies para melhorar sua experiência, medir desempenho e exibir anúncios relevantes.
-<button onclick="acceptCookies()" style="margin-left:10px;padding:8px 15px;border:none;background:#A27658;color:white;border-radius:5px;cursor:pointer">
-Aceitar
-</button>
-</div>
-
-<script>
-document.addEventListener('DOMContentLoaded', function () {
-  const banner = document.getElementById('cookieBanner');
-
-  if (localStorage.getItem('cookiesAccepted')) {
-    banner.style.display = 'none';
-  }
-
-  window.acceptCookies = function () {
-    banner.style.display = 'none';
-    localStorage.setItem('cookiesAccepted', 'true');
-  };
-});
-</script>
-
-
 </body>
 </html>
-
-
-
