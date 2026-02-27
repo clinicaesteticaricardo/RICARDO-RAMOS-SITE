@@ -157,7 +157,7 @@
                 flex-direction: column;
                 align-items: center;
                 gap: 1.2rem;
-                bottom: 10%; /* Mais para baixo no mobile */
+                bottom: 10%;
                 width: 90%;
                 max-width: 400px;
             }
@@ -169,6 +169,18 @@
             .hero {
                 padding-bottom: 25%;
             }
+
+            /* Apenas no mobile: fundo marrom nos dois botões iniciais */
+            .hero-buttons .btn-hero {
+                background-color: var(--primary-color); /* marrom #A3785C */
+                border-color: var(--primary-color);
+                color: #ffffff;
+            }
+            .hero-buttons .btn-hero:hover {
+                background-color: #8B5E3C; /* tom um pouco mais escuro no hover */
+                border-color: #8B5E3C;
+                color: #ffffff;
+            }
         }
         @media (min-width: 769px) {
             .hero-buttons {
@@ -178,7 +190,7 @@
                 bottom: 8%;
             }
             .hero-buttons a {
-                width: 420px; /* Largura equilibrada no desktop */
+                width: 420px;
             }
         }
         /* Sections */
