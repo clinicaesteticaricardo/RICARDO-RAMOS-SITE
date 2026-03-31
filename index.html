@@ -11,7 +11,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ricardo Ramos | Estética Avançada</title>
- 
+    <link rel="icon" href="https://ricardoramosbancodeimagens.wordpress.com/wp-content/uploads/2026/02/novo-projeto-5.webp?allow_lossy=1" type="image/webp">
+
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -242,7 +243,7 @@
             text-align: left;
             padding: 1.8rem;
             border: 1px solid rgba(162, 118, 88, 0.1);
-            height: 420px;
+            /* REMOVIDO: height: 420px; */ /* Esta linha foi removida para permitir altura dinâmica */
             display: flex;
             flex-direction: column;
         }
@@ -250,11 +251,7 @@
             transform: translateY(-4px);
             box-shadow: 0 12px 35px rgba(0,0,0,0.1);
         }
-        .service-icon img {
-            width: 50px;
-            height: 50px;
-            margin-bottom: 1rem;
-        }
+        /* REMOVIDO: .service-icon img */
         .service-info h3 {
             color: var(--white);
             font-size: 1.15rem;
@@ -280,6 +277,38 @@
             font-size: 0.9rem;
             display: inline-block;
         }
+        /* Novo CSS para Carrossel de Serviços */
+        .service-carousel {
+            position: relative;
+            width: 100%;
+            padding-top: 100%; /* Para manter a proporção 1:1 (quadrada) */
+            overflow: hidden;
+            border-radius: 10px; /* Bordas arredondadas para as imagens */
+            margin-bottom: 1rem;
+        }
+        .service-carousel-slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Garante que a imagem cubra o espaço sem distorcer */
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+        }
+        .service-carousel-slide.active {
+            opacity: 1;
+        }
+        .service-card .service-info {
+            flex-grow: 1; /* Permite que o texto ocupe o espaço disponível */
+            display: flex;
+            flex-direction: column;
+        }
+        .service-card .service-info p {
+            flex-grow: 1; /* Garante que a descrição ocupe o máximo de espaço */
+            margin-bottom: 1rem;
+        }
+        /* Fim do Novo CSS para Carrossel de Serviços */
         @media (max-width: 768px) {
             .services-grid {
                 display: flex;
@@ -291,7 +320,7 @@
             .service-card {
                 flex: 0 0 85%;
                 scroll-snap-align: center;
-                height: auto;
+                height: auto; /* Ajusta a altura para o conteúdo */
             }
         }
         /* Testimonials */
@@ -715,102 +744,125 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <h2 class="section-title">Serviços Estéticos Disponíveis</h2>
         <p class="section-subtitle">Os serviços são definidos após avaliação individual, respeitando as necessidades, expectativas e características de cada paciente, com foco em cuidado, segurança e acompanhamento.</p>
         <div class="services-grid">
-<div class="service-card">
-    <div class="service-icon">
-        <img src="https://ricardoramosbancodeimagens.wordpress.com/wp-content/uploads/2026/02/img_7421.png?allow_lossy=1" alt="Aplicação estética facial">
-    </div>
-    <div class="service-info">
-        <h3>Aplicação estética sob avaliação</h3>
-        <p>Procedimento estético realizado após avaliação profissional, com foco em cuidado, aparência e acompanhamento individual.</p>
-    </div>
-    <div class="service-btn">
-        <a href="https://wa.me/5563999610812?text=Olá! Vim pelo site" class="btn" target="_blank">Saiba mais</a>
-    </div>
-</div>
-<div class="service-card">
-    <div class="service-icon">
-        <img src="https://ricardoramosbancodeimagens.wordpress.com/wp-content/uploads/2026/02/img_7422.png?allow_lossy=1" alt="Técnica de firmeza facial">
-    </div>
-    <div class="service-info">
-        <h3>Técnicas de firmeza facial</h3>
-        <p>Procedimento estético realizado após avaliação profissional, com foco em cuidado, aparência e acompanhamento individual.</p>
-    </div>
-    <div class="service-btn">
-        <a href="https://wa.me/5563999610812?text=Olá! Vim pelo site" class="btn" target="_blank">Saiba mais</a>
-    </div>
-</div>
-<div class="service-card">
-    <div class="service-icon">
-        <img src="https://ricardoramosbancodeimagens.wordpress.com/wp-content/uploads/2026/02/img_7424.png?allow_lossy=1" alt="Volume e contorno facial">
-    </div>
-    <div class="service-info">
-        <h3>Volume e contorno facial</h3>
-        <p>Procedimento estético realizado após avaliação profissional, com foco em cuidado, aparência e acompanhamento individual.</p>
-    </div>
-    <div class="service-btn">
-        <a href="https://wa.me/5563999610812?text=Olá! Vim pelo site" class="btn" target="_blank">Saiba mais</a>
-    </div>
-</div>
- <div class="service-card">
-    <div class="service-icon">
-        <img src="https://ricardoramosbancodeimagens.wordpress.com/wp-content/uploads/2026/02/corpo.png?allow_lossy=1" alt="Contorno corporal">
-    </div>
-    <div class="service-info">
-        <h3>Contorno e proporção corporal</h3>
-        <p>Procedimento estético realizado após avaliação profissional, com foco em cuidado, aparência e acompanhamento individual.</p>
-    </div>
-    <div class="service-btn">
-        <a href="https://wa.me/5563999610812?text=Olá! Vim pelo site" class="btn" target="_blank">Saiba mais</a>
-    </div>
-</div>
- <div class="service-card">
-    <div class="service-icon">
-        <img src="https://ricardoramosbancodeimagens.wordpress.com/wp-content/uploads/2026/02/img_7417.png?allow_lossy=1" alt="Hidratação profunda da pele">
-    </div>
-    <div class="service-info">
-        <h3>Hidratação e viço da pele</h3>
-        <p>Procedimento estético realizado após avaliação profissional, com foco em cuidado, aparência e acompanhamento individual.</p>
-    </div>
-    <div class="service-btn">
-        <a href="https://wa.me/5563999610812?text=Olá! Vim pelo site" class="btn" target="_blank">Saiba mais</a>
-    </div>
-</div>
- <div class="service-card">
-    <div class="service-icon">
-        <img src="https://ricardoramosbancodeimagens.wordpress.com/wp-content/uploads/2026/02/img_7418.png?allow_lossy=1" alt="Renovação da pele">
-    </div>
-    <div class="service-info">
-        <h3>Renovação e qualidade da pele</h3>
-        <p>Procedimento estético realizado após avaliação profissional, com foco em cuidado, aparência e acompanhamento individual.</p>
-    </div>
-    <div class="service-btn">
-        <a href="https://wa.me/5563999610812?text=Olá! Vim pelo site" class="btn" target="_blank">Saiba mais</a>
-    </div>
-</div>
- <div class="service-card">
-    <div class="service-icon">
-        <img src="https://ricardoramosbancodeimagens.wordpress.com/wp-content/uploads/2026/02/img_7419.png?allow_lossy=1" alt="Contorno facial e corporal">
-    </div>
-    <div class="service-info">
-        <h3>Contorno facial e corporal</h3>
-        <p>Procedimento estético realizado após avaliação profissional, com foco em cuidado, aparência e acompanhamento individual.</p>
-    </div>
-    <div class="service-btn">
-        <a href="https://wa.me/5563999610812?text=Olá! Vim pelo site" class="btn" target="_blank">Saiba mais</a>
-    </div>
-</div>
-<div class="service-card">
-    <div class="service-icon">
-        <img src="https://ricardoramosbancodeimagens.wordpress.com/wp-content/uploads/2026/02/img_7420.png?allow_lossy=1" alt="Firmeza e sustentação da pele">
-    </div>
-    <div class="service-info">
-        <h3>Firmeza e sustentação da pele</h3>
-        <p>Procedimento estético realizado após avaliação profissional, com foco em cuidado, aparência e acompanhamento individual.</p>
-    </div>
-    <div class="service-btn">
-        <a href="https://wa.me/5563999610812?text=Olá! Vim pelo site" class="btn" target="_blank">Saiba mais</a>
-    </div>
-</div>
+            <!-- Serviço 1 – Toxina Botulínica -->
+            <div class="service-card">
+                <div class="service-carousel" data-service-id="1">
+                    <img src="https://ricardoramosbancodeimagens.wordpress.com/wp-content/uploads/2026/02/botox-1-1.png" class="service-carousel-slide active" alt="Toxina Botulínica 1">
+                    <img src="https://ricardoramosbancodeimagens.wordpress.com/wp-content/uploads/2026/02/whatsapp-image-2026-02-05-at-14.03.27.jpeg" class="service-carousel-slide" alt="Toxina Botulínica 2">
+                </div>
+                <div class="service-info">
+                    <h3>Toxina Botulínica (Botox) Preventivo e Full Face</h3>
+                    <p>Indicada para prevenção e tratamento de rugas e linhas de expressão, promovendo rejuvenescimento facial com naturalidade. Atua no relaxamento controlado da musculatura, preservando a expressividade e prevenindo o envelhecimento precoce.</p>
+                </div>
+                <div class="service-btn">
+                    <a href="https://wa.me/5563999610812?text=Olá! Tenho interesse no serviço de Toxina Botulínica (Botox)." class="btn" target="_blank">Saiba mais</a>
+                </div>
+            </div>
+
+            <!-- Serviço 2 – Fios Faciais -->
+            <div class="service-card">
+                <div class="service-carousel" data-service-id="2">
+                    <img src="https://ricardoramosbancodeimagens.wordpress.com/wp-content/uploads/2026/02/whatsapp-image-2026-02-05-at-14.02.28.jpeg" class="service-carousel-slide active" alt="Fios Faciais 1">
+                    <img src="https://ricardoramosbancodeimagens.wordpress.com/wp-content/uploads/2026/02/whatsapp-image-2026-02-05-at-14.02.11.jpeg" class="service-carousel-slide" alt="Fios Faciais 2">
+                </div>
+                <div class="service-info">
+                    <h3>Fios Faciais para Mini Lifting</h3>
+                    <p>Procedimento minimamente invasivo para flacidez facial leve a moderada, promovendo sustentação, reposicionamento dos tecidos e estímulo à produção de colágeno para resultados naturais e progressivos.</p>
+                </div>
+                <div class="service-btn">
+                    <a href="https://wa.me/5563999610812?text=Olá! Tenho interesse no serviço de Fios Faciais para Mini Lifting." class="btn" target="_blank">Saiba mais</a>
+                </div>
+            </div>
+
+            <!-- Serviço 3 – Preenchimentos Faciais com Ácido Hialurônico -->
+            <div class="service-card">
+                <div class="service-carousel" data-service-id="3">
+                    <img src="https://ricardoramosbancodeimagens.wordpress.com/wp-content/uploads/2026/02/whatsapp-image-2026-02-05-at-14.01.44.jpeg" class="service-carousel-slide active" alt="Preenchimentos Faciais 1">
+                    <img src="https://ricardoramosbancodeimagens.wordpress.com/wp-content/uploads/2026/02/whatsapp-image-2026-02-05-at-14.01.32.jpeg" class="service-carousel-slide" alt="Preenchimentos Faciais 2">
+                </div>
+                <div class="service-info">
+                    <h3>Preenchimentos Faciais (Harmonização Facial)</h3>
+                    <p>Utilizados para restaurar volumes, definir contornos e melhorar a simetria do rosto com ácido hialurônico. A harmonização é planejada de forma personalizada, buscando resultados naturais e sofisticados.</p>
+                </div>
+                <div class="service-btn">
+                    <a href="https://wa.me/5563999610812?text=Olá! Tenho interesse no serviço de Preenchimentos Faciais (Harmonização Facial)." class="btn" target="_blank">Saiba mais</a>
+                </div>
+            </div>
+
+            <!-- Serviço 4 – Procedimentos Corporais -->
+            <div class="service-card">
+                <div class="service-carousel" data-service-id="4">
+                    <img src="https://ricardoramosbancodeimagens.wordpress.com/wp-content/uploads/2026/02/bum-bum-1.webp" class="service-carousel-slide active" alt="Procedimentos Corporais 1">
+                    <img src="https://ricardoramosbancodeimagens.wordpress.com/wp-content/uploads/2026/02/corporal-bum-bum-2.jpg.jpeg" class="service-carousel-slide" alt="Procedimentos Corporais 2">
+                </div>
+                <div class="service-info">
+                    <h3>Preenchimentos Corporais – Glúteos e Região Íntima</h3>
+                    <p>Procedimentos indicados para melhora do contorno, volume e estética corporal. As técnicas são realizadas de forma individualizada, respeitando critérios de segurança, proporção e funcionalidade, promovendo resultados harmônicos e elegantes.</p>
+                </div>
+                <div class="service-btn">
+                    <a href="https://wa.me/5563999610812?text=Olá! Tenho interesse no serviço de Preenchimentos Corporais (Glúteos e Região Íntima)." class="btn" target="_blank">Saiba mais</a>
+                </div>
+            </div>
+
+            <!-- Serviço 5 – Skinbooster -->
+            <div class="service-card">
+                <div class="service-carousel" data-service-id="5">
+                    <img src="https://ricardoramosbancodeimagens.wordpress.com/wp-content/uploads/2026/02/skinbooster-1.jpg.jpeg" class="service-carousel-slide active" alt="Skinbooster 1">
+                    <img src="https://ricardoramosbancodeimagens.wordpress.com/wp-content/uploads/2026/02/skinbooster-2.jpg.jpeg" class="service-carousel-slide" alt="Skinbooster 2">
+                </div>
+                <div class="service-info">
+                    <h3>Skinbooster – Hidratação Profunda da Pele</h3>
+                    <p>Tratamento injetável para hidratação profunda da pele, melhora da elasticidade, textura e viço. Indicado para rejuvenescimento sutil e prevenção do envelhecimento cutâneo, proporcionando aparência saudável e natural.</p>
+                </div>
+                <div class="service-btn">
+                    <a href="https://wa.me/5563999610812?text=Olá! Tenho interesse no serviço de Skinbooster (Hidratação Profunda da Pele)." class="btn" target="_blank">Saiba mais</a>
+                </div>
+            </div>
+
+            <!-- Serviço 6 – Protocolo New Skin -->
+            <div class="service-card">
+                <div class="service-carousel" data-service-id="6">
+                    <img src="https://ricardoramosbancodeimagens.wordpress.com/wp-content/uploads/2026/02/new-skin-2.jpg.jpeg" class="service-carousel-slide active" alt="Protocolo New Skin 1">
+                    <img src="https://ricardoramosbancodeimagens.wordpress.com/wp-content/uploads/2026/02/new-skin-1.jpg.jpeg?w=819&" class="service-carousel-slide" alt="Protocolo New Skin 2">
+                </div>
+                <div class="service-info">
+                    <h3>Protocolo New Skin – Renovação e Qualidade da Pele</h3>
+                    <p>Tratamento exclusivo para melhora global da qualidade da pele. Atua em manchas solares, melasma, acne ativa e cicatrizes, promovendo uniformização do tom, renovação celular e saúde cutânea.</p>
+                </div>
+                <div class="service-btn">
+                    <a href="https://wa.me/5563999610812?text=Olá! Tenho interesse no serviço de Protocolo New Skin (Renovação e Qualidade da Pele)." class="btn" target="_blank">Saiba mais</a>
+                </div>
+            </div>
+
+            <!-- Serviço 7 – Endolifting Facial e Corporal -->
+            <div class="service-card">
+                <div class="service-carousel" data-service-id="7">
+                    <img src="https://ricardoramosbancodeimagens.wordpress.com/wp-content/uploads/2026/02/endolifting-1.png?w=768&allow_lossy=1" class="service-carousel-slide active" alt="Endolifting 1">
+                    <img src="https://ricardoramosbancodeimagens.wordpress.com/wp-content/uploads/2026/02/whatsapp-image-2026-02-05-at-14.03.06.jpeg?w=1024&allow_lossy=1" class="service-carousel-slide" alt="Endolifting 2">
+                </div>
+                <div class="service-info">
+                    <h3>Endolifting Facial e Corporal</h3>
+                    <p>Procedimento minimamente invasivo para gordura localizada e flacidez facial/corporal. Estimula o colágeno e promove retração da pele, melhorando contorno e firmeza de forma progressiva e natural, além de reduzir gordura por lipólise.</p>
+                </div>
+                <div class="service-btn">
+                    <a href="https://wa.me/5563999610812?text=Olá! Tenho interesse no serviço de Endolifting Facial e Corporal." class="btn" target="_blank">Saiba mais</a>
+                </div>
+            </div>
+
+            <!-- Serviço 8 – Bioestimuladores de Colágeno -->
+            <div class="service-card">
+                <div class="service-carousel" data-service-id="8">
+                    <img src="https://ricardoramosbancodeimagens.wordpress.com/wp-content/uploads/2026/02/img_5918.jpg.jpeg?allow_lossy=1" class="service-carousel-slide active" alt="Bioestimuladores de Colágeno 1">
+                    <img src="https://ricardoramosbancodeimagens.wordpress.com/wp-content/uploads/2026/02/img_5918.jpg.jpeg?allow_lossy=1" class="service-carousel-slide" alt="Bioestimuladores de Colágeno 2">
+                </div>
+                <div class="service-info">
+                    <h3>Bioestimuladores de Colágeno</h3>
+                    <p>Promovem firmeza, sustentação e rejuvenescimento da pele através da estimulação natural do colágeno. Indicados para face e corpo, oferecem resultados graduais, duradouros e naturais.</p>
+                </div>
+                <div class="service-btn">
+                    <a href="https://wa.me/5563999610812?text=Olá! Tenho interesse no serviço de Bioestimuladores de Colágeno." class="btn" target="_blank">Saiba mais</a>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -1070,10 +1122,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         let cookiesAccepted = false;
         document.addEventListener('DOMContentLoaded', function () {
             const banner = document.getElementById('cookieBanner');
-            if (cookiesAccepted) banner.style.display = 'none';
+            // Verifica se o cookie de aceitação já existe
+            if (localStorage.getItem('cookiesAccepted') === 'true') {
+                banner.style.display = 'none';
+                cookiesAccepted = true;
+            }
         });
         window.acceptCookies = function () {
             document.getElementById('cookieBanner').style.display = 'none';
+            localStorage.setItem('cookiesAccepted', 'true'); // Salva a preferência
             cookiesAccepted = true;
         };
 
@@ -1100,6 +1157,29 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             next() { this.currentIndex = (this.currentIndex + 1) % this.slides.length; this.show(this.currentIndex); }
         }
         document.querySelectorAll('.location-carousel').forEach(el => new Carousel(el));
+
+        // Novo JavaScript para Carrossel de Serviços
+        class ServiceCarousel {
+            constructor(element) {
+                this.element = element;
+                this.slides = element.querySelectorAll('.service-carousel-slide');
+                this.currentIndex = 0;
+                if (this.slides.length > 0) {
+                    this.slides[0].classList.add('active');
+                    setInterval(() => this.next(), 5000); // Troca a cada 5 segundos
+                }
+            }
+            show(index) {
+                this.slides.forEach(s => s.classList.remove('active'));
+                this.slides[index].classList.add('active');
+            }
+            next() {
+                this.currentIndex = (this.currentIndex + 1) % this.slides.length;
+                this.show(this.currentIndex);
+            }
+        }
+        document.querySelectorAll('.service-carousel').forEach(el => new ServiceCarousel(el));
+        // Fim do Novo JavaScript para Carrossel de Serviços
 
         // Accordion FAQ
         document.querySelectorAll('.accordion-item').forEach(item => {
